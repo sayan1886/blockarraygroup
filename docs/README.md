@@ -1,6 +1,7 @@
 
 
 # Block Array White Paper
+**version 2.1.5**
 
 !> **Warning** This is in progress, and may have breaking issues
 
@@ -129,22 +130,12 @@ The choices of duty status when a property-carrying driver records his or her ti
 Add to these rules are the burdensome additional regulations such as when
 
 
-1. Once the duty period starts, it runs for 14 consecutive hours after which the driver may not drive a CMV again until having another 10 or more consecutive hours off-duty. Nothing stops the running of the 14 hour clock.
-
-
-2. During the 14-hour duty period, which some people refer to as a “driving window,” you may drive a maximum of 11 hours.
-
-
-3. When you reach a total of 60 on-duty hours in 7 days, you must have a period of at least 34 consecutive hours off duty. (There is an alternative available for carriers that operate every day of the week-- that is a maximum of 70 hours in 8 days.)
-
-
-4. Requires an off-duty break at some point during the duty period. The rule says that you may not drive a CMV if it has been 8 or more hours since your last off-duty period of at least 30 minutes.
-
-
-5. For every 5 duty periods that they return to their starting point, they may choose one 16-hour duty period.
-
-
-6. The counting of the maximum 60 or 70 hours on duty restarts anytime a driver has at least 34 consecutive hours off duty.
++ Once the duty period starts, it runs for 14 consecutive hours after which the driver may not drive a CMV again until having another 10 or more consecutive hours off-duty. Nothing stops the running of the 14 hour clock.
++ During the 14-hour duty period, which some people refer to as a “driving window,” you may drive a maximum of 11 hours.
++ When you reach a total of 60 on-duty hours in 7 days, you must have a period of at least 34 consecutive hours off duty. (There is an alternative available for carriers that operate every day of the week-- that is a maximum of 70 hours in 8 days.)
++ Requires an off-duty break at some point during the duty period. The rule says that you may not drive a CMV if it has been 8 or more hours since your last off-duty period of at least 30 minutes.
++ For every 5 duty periods that they return to their starting point, they may choose one 16-hour duty period.
++ The counting of the maximum 60 or 70 hours on duty restarts anytime a driver has at least 34 consecutive hours off duty.
                                                                                                         source: FMCSA 2018 
 
 [airtable-embed](https://airtable.com/embed/shrAK5qn8v7XOt5fq?backgroundColor=blue&viewControls=on ':include :type=iframe width=100% height=533x')
@@ -284,9 +275,13 @@ A company implementing EPCIS can use the authenticated identity of a trading par
 
 %primer on shipping documents
 
+We have two main shipping documents 
+
+<b> Bill of Lading </b> and <b> Letter of Credit </b>
+
 ### Bill of Lading
 
-A Bill of Lading is a legal document issued by the Carrier or agent of the Carrier. The legal instrument is as old as trade itself. It has three main attributes:  
+A Bill of Lading is a legal document issued by the Carrier or agent of the Carrier. They are the legal title to the cargo. It has three main attributes:  
 
 Document of Title to the goods: possession of the Bill of Lading is equal to having title in the referenced goods. 
 Receipt - Evidence that the Carrier has received the goods of a certain quality etc in compliance with the Commercial Contract between the parties
@@ -315,11 +310,13 @@ Inorder to design and implement enterprise-quality smart contracts, we need to d
 +Contract Binding - A Enterprise Smart Contract Binding is the composition of these parts creating a unique instance of an Enterprise Smart Contract. It is created when a contract begins negotiation between counterparties and becomes versioned and locked when each counterparty signs the contract. Once signed and locked the Enterprise Smart Contract begins the execution of the terms and conditions that lead to fulfillment.
 
 In order to develop Enterprise quality smart contracts standards need to be put in place. 
-+Universal Business Langauge 
-+Industry Agreed-upon Standards and Verbiage 
-+Data Attestation for data being provided
-+Discrete Privacy Levels
++ Universal Business Langauge 
++ Industry Agreed-upon Standards and Verbiage 
++ Data Attestation for data being provided
++ Discrete Privacy Levels
 
+We can categorize  smart contracts into two distinct featuresets 
+> **Notification** and **Executing**
 
 
 ## ChainProof - 
@@ -560,10 +557,11 @@ https://pakupaku.me/plaublin/rbft/5000a297.pdf
 
 ___
 
-# Document Styling Guide
+# Document & Development Styling Guide
 
 This document was prepared in [**Sublime 3**](https://www.sublimetext.com/)
 
+We follow the [**Semantic Versioning**](https://semver.org/) specification for version numbering.
 $$ \alpha $$
 
 This document uses the following Markdown Specifications 
