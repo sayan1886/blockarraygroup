@@ -2,16 +2,16 @@
 
 # Block Array White Paper
 
-#### Version Information
-#### Author:
+!> **Warning** This is in progress, and may have breaking issues
 
-Block Array Corporation
+:warning: Many features are to be added, with graphics being the last. Spelling errors are to be expected
+
+## Introduction
+
+
+Block Array Corporation [^1]
 
 www.blockarray.com
-
-[airtable-embed](https://airtable.com/embed/shrCzCmWXhYaIs4oX?backgroundColor=blue&layout=card&viewControls=on ':include :type=iframe width=100% height=533x')
-
-
 
 
 ----------
@@ -49,6 +49,7 @@ Table of Contents
 9. Appendix
 
 
+
 ----------
 
 
@@ -82,8 +83,6 @@ copyright and disclaimer page
 # Abstract
 
 
-
-
 ----------
 
 
@@ -105,7 +104,7 @@ The Electronic Logging Device Mandate (ELD) is intended to help create a safer w
 What is the impact of this new law?
 
 
-> Under Federal regulations, the motor carrier is responsible for training and monitoring its drivers to ensure compliance with Hours of Service rules.  Any driver violation may also be held against the carrier. Failing to establish an effective Hours of Service monitoring and compliance system can result in fines of thousands of dollars.  In extreme cases, motor carrier officials have even received jail sentences.
+!> Under Federal regulations, the motor carrier is responsible for training and monitoring its drivers to ensure compliance with Hours of Service rules.  Any driver violation may also be held against the carrier. Failing to establish an effective Hours of Service monitoring and compliance system can result in fines of thousands of dollars.  In extreme cases, motor carrier officials have even received jail sentences.
 
 So any violation in failing to comply with this new law could mean 
 
@@ -113,7 +112,7 @@ So any violation in failing to comply with this new law could mean
 Four Driver Status Modes
 The choices of duty status when a property-carrying driver records his or her time on a record of duty status, or R.O.D.S
 
-| off duty | sleeper berth | driving | on duty/not driving |
+> off duty | sleeper berth | driving | on duty/not driving |
 
 
 
@@ -147,6 +146,9 @@ Add to these rules are the burdensome additional regulations such as when
 
 6. The counting of the maximum 60 or 70 hours on duty restarts anytime a driver has at least 34 consecutive hours off duty.
                                                                                                         source: FMCSA 2018 
+
+[airtable-embed](https://airtable.com/embed/shrAK5qn8v7XOt5fq?backgroundColor=blue&viewControls=on ':include :type=iframe width=100% height=533x')
+
 
 <explainer paragraph>
 
@@ -193,10 +195,11 @@ Documents & Records: Bills of Lading, Industry Specific Documents, Legally Manda
 Barcodes -  
 
 
-### Passports - Driver, Vehicle and Asset
+## Passports - Driver, Vehicle and Asset
 
 Driver records are a great use case.
 
+[airtable-embed](https://airtable.com/embed/shrCzCmWXhYaIs4oX?backgroundColor=blue&layout=card&viewControls=on ':include :type=iframe width=100% height=533x')
 
 | Identifying Information for Supporting Documents                                                                                                                                                                                          |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -207,7 +210,10 @@ Driver records are a great use case.
 
 *These must be listed on the supporting documents in order to be eligible for use.*
 
-| Supporting Documents 
+### Supporting Documents 
+
+[airtable-embed](https://airtable.com/embed/shrmxXAV1idTUZ1xE?backgroundColor=blue&layout=card&viewControls=on ':include :type=iframe width=100% height=533x')
+
 
 Documents that must be retained by law                                                              |
 | -------------------------------------------------------------------------------------------------------------------------- |
@@ -274,9 +280,60 @@ A company implementing EPCIS can use the authenticated identity of a trading par
 | Electronic Article Surveillance (EAS)               |
 | Promotion Tracking                                  |
 
+## Shipping Documents
+
+%primer on shipping documents
+
+### Bill of Lading
+
+A Bill of Lading is a legal document issued by the Carrier or agent of the Carrier. The legal instrument is as old as trade itself. It has three main attributes:  
+
+Document of Title to the goods: possession of the Bill of Lading is equal to having title in the referenced goods. 
+Receipt - Evidence that the Carrier has received the goods of a certain quality etc in compliance with the Commercial Contract between the parties
+Contract of Carriage - Evidence of the Contract of Carriage (CoC) - that the carrier will transport the goods in compliance with the Commercial Contract.
+Problems with the current system
+
+THEFT - BoL is a bearer document of title. This bears a particular risk that anyone who has possession of the BoL has a prima facie claim to the goods. Because possession equals ownership this creates an incentive for BoL theft. 
+FRAUD - Manipulation/alteration of BoL to hide accountability due to shipment damage or other issues.
+INEFFICIENCY - BoL are issued as three original physical documents. One document is managed by the banks involved in trade finance. One document is couriered to the recipient of the goods. And one document is retained by the Carrier. 
+PHYSICALITY - Delay in distribution of the BoLs. Due to the originals only existing in a physical form, this means that the Carrier has to courier one of the originals to the Consignee. This leads to a situation where the goods have arrived at a Discharge port but that the Consignee has not received their BoL. 
+AMENDMENTS - Making amendments to a BoL are complicated. All three BoLs have to be sent to the Carrier who destroys them then issues a new set of BoLs with the intended amendments. 
+
+
+%% INSERT BILL OF LADING GS1 SAMPLE IMAGE %% 
+
+
+### Enterprise Smart Contracts
+Inorder to design and implement enterprise-quality smart contracts, we need to define exactly what an enterprise smart contract is. We shall decompose this concept into its major components below:
+
+**Components**
+
++Schema: the data elements required for the execution and fulfillment of contract obligations between counterparties and the cryptographic proofs needed to maintain the integrity and trust in the contract for the participating counterparties and any regulatory or oversight entities. 
++Counterparties – authenticated identity that can utilize the same cryptographic primitives as blockchains like digital signatures, of participants (people, organizations and things) agreeing to the terms and execution of the contract. Counterparties are represented as personas in the logic of a contract that are assigned identity as the contract goes through its binding process.
++External Sources – contracts that require external interaction, input of data or notification in order to fulfill the execution requirements of the contract. These external sources and conditions for interaction are agreed to by the counterparties and the regulatory oversight entities and must provide cryptographic proofs in order to trust and maintain the integrity these external sources. 
++Ledger – the immutable instance on a distributed ledger (blockchain) based on the schema that is used to record all contract activities and proofs required. This is can be either the public version of a “distributed trustless truth database” or a “shared, permissioned, semi-trusted, discretionarily private, truth database”. 
++Contract Binding - A Enterprise Smart Contract Binding is the composition of these parts creating a unique instance of an Enterprise Smart Contract. It is created when a contract begins negotiation between counterparties and becomes versioned and locked when each counterparty signs the contract. Once signed and locked the Enterprise Smart Contract begins the execution of the terms and conditions that lead to fulfillment.
+
+In order to develop Enterprise quality smart contracts standards need to be put in place. 
++Universal Business Langauge 
++Industry Agreed-upon Standards and Verbiage 
++Data Attestation for data being provided
++Discrete Privacy Levels
 
 
 
+## ChainProof - 
+
+For example, if a screwdriver manufacturer creates a new screwdriver, they could tokenize the screwdriver and record it using the digital signature of the manufacturer establishing provenance. 
+Then, once sold and shipped to a distributor, a transaction transfers ownership of the tokenized screwdriver to the distributor (public key). This transfer of ownership is confirmed by signing the transaction with the same digital signature of the manufacturer. 
+The distributor can repeat the same exercise using their keys when selling the asset in the future, documenting the lineage of that screwdriver as it navigates the supply chain.
+
+
+Tokenization and signing with public/private key pairs in the blockchain world establishes provenance, documenting the moment a thing is recorded.
+Public key can be used to support buying, selling, trading, insuring and tracking of things across organizations thus creating a full audit trail of the tokenized object itself, or lineage.
+
+Tokens can and usually are bundled together in a collection. The collection can also be tokenized creating a composite token of all the tokens contained within. 
+For example, if every phone part were to be tokenized and assembled into a phone, the phone itself could be represented with a token made from its parts.
 
 
 
@@ -334,12 +391,57 @@ Our requirements list:
 
 ## Implementation 
 
+Differences between standard Hyperledger Fabric Deployment 
+
+Gossip Protocol
+Consensus Protocol 
+State Database
+Data Storage
+Account Identifiers 
+
 paragraph 
+
+### RBFT 
+As described in their paper, existing BFT protocols use a special replica, called the "primary", which indicates to other replicas the order in which requests should be processed. This primary can be smartly malicious and degrade the performance of the system without being detected by correct replicas. Our evaluation shows that RBFT achieves similar performance as the most robust protocols when there is no failure and that, under faults, its maximum performance degradation is about 3%, whereas it is, at least, equal to 78% for existing protocols."
+
+RBFT implements a new approach whereby multiple instances of the protocol run simultaneously, a Master instance, and one or more Backup instances. All the instances order the requests, but only the requests ordered by the Master instance are actually executed. All nodes monitor the Master and compare its performance with that of the Backup instances. If the Master does not perform acceptably, it is considered malicious and replaced.
+
+
+
+### Gossip Protocol: 
+
+RAET: Reliable Asynchronous Event Transport Protocol, a high-performance, fault-tolerant communications protocol on top of UDP. RAET leverages Curve25519, a highly-secure high-performance elliptic curve.
+
+RAET is designed to provide secure reliable scalable asynchronous message/event transport over the internet in a micro-threaded multi-process application framework that uses UDP for interhost communication and LibSodium for authentication, encryption and the CurveCP handshake for secure bootstrap.
+
+The queue management and micro-threaded application support is provided by Ioflo. RAET is a complementary project to Ioflo in that RAET enables multiple Ioflo applications to work together over a network as part of a distributed application.
+
+
+Instead of using Message Authentication Codes, every communication is digitally signed using Curve25519.
+While MAC authenticators are computationally less expensive to verify than digital signatures, we feel that given the foreseeable protocol applications today, the security trade-offs of using MACs would be too high.
+
+> For more Information visit the [RAET Github](https://github.com/saltstack/raet)
 
 ### State Database
 CouchDB additionally enables rich query against the smart contract data, when chaincode values (e.g. assets) are modeled as JSON data.
 
 you can also perform complex rich queries against the chaincode data values, using the CouchDB JSON query language within chaincode. These types of queries are excellent for understanding what is on the ledger. 
+
+### Account Identifiers 
+
+`1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa` - A Bitcoin Address
+
+	Traditional blockchain designs use cryptographic hashes to generate globally unique IDs that are statistically guaranteed to never have a collision. 
+The problem with these hashes is that they require significantly more memory and more CPU cycles to manipulate. It takes significantly more CPU time to look up an account record by hash than with a direct array index. 
+For example, 64 bit integers are easier to compare and manipulate than 160+bit IDs. Larger hash IDs means there is less room in the CPU cache and that more memory is required. On modern operating systems, infrequently accessed RAM is compressed, but hash identifiers are random data that is not compressible.
+
+We propose the implementation of a Globally Unique Identifier (GUID) for use in account identification. Various implementations have been studied such as **IBAN** or International Bank Account Number.  Requirements for such an address scheme must:
+
++ Serialized
++ Standardized 
++ Efficient 
+
+
 
 ### Endorsement Policies
 
@@ -350,6 +452,7 @@ paragraph
 1. Primary
 2. Secondary
 3. Heartbeat
+
 #### Primary
 
 Primary nodes provide specific services:
@@ -441,12 +544,34 @@ Requirements
 
 ----------
 
-References
+# References
 
 FMCSA 
 https://www.fmcsa.dot.gov/hours-service/elds/electronic-logging-devices
 
 D.O.T 
 https://www.gpo.gov/fdsys/pkg/FR-2015-12-16/pdf/2015-31336.pdf
+
+BitShares - Blockchain Scalability
+https://bitshares.org/technology/industrial-performance-and-scalability/
+
+RBFT: Redundant Byzantine Fault Tolerance
+https://pakupaku.me/plaublin/rbft/5000a297.pdf
+
+___
+
+# Document Styling Guide
+
+This document was prepared in [**Sublime 3**](https://www.sublimetext.com/)
+
+$$ \alpha $$
+
+This document uses the following Markdown Specifications 
+<b>Common Mark</b>
+
+Finally, the site was generated using [**docsify**](https://docsify.js.org/#/)
+
+(C) 2018 **Block Array Corporation** | *All Rights Reserved*
+
 
 
