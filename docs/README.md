@@ -1,5 +1,6 @@
 
 
+
 # Block Array White Paper
 **version 2.1.5**
 
@@ -10,7 +11,7 @@
 ## Introduction
 
 
-Block Array Corporation [^1]
+Block Array Corporation 
 
 www.blockarray.com
 
@@ -67,13 +68,14 @@ this section left intentionally blank
 ----------
 
 
+[![](https://img.shields.io/badge/whitepaper-v2.1.5-lightgrey.svg)](https://weibo.com/snipaste)
 
 
+[![](https://img.shields.io/badge/telegram-group-blue.svg)](https://t.me/Block_Array)
 
+[![](https://img.shields.io/badge/twitter-%40blockarraygroup-blue.svg)](https://twitter.com/@blockarraygroup)
 
-copyright and disclaimer page
-
-
+[![](https://img.shields.io/badge/e--mail-contact%40blockarray.com-brightgreen.svg)](mailto:contact@blockarray.com)
 
 
 
@@ -89,10 +91,42 @@ copyright and disclaimer page
 
 # Overview
 
-
 Global operations need consistent global standards to be applied across their supply chain, and this is only going to become increasingly difficult with legacy enterprise systems and increased legal costs. Laws recently passed like The California Transparency Supply Chain Act or the Electronic Logging Data Mandate for Trucking add additional burdens to businesses trying to comply with the law, coupled with more demands on increasingly outdated IT systems - this then creates multiple problems for firms. 
 
-Use Case Examples 
+
+
+# Logistics & Supply Chain Managment
+
+We can divde the logistics industry into three (3) segments: Land, Air and Sea.
+
+Of these market segments, land (overland freight) compromises the largest share, with Trucking being the largest segment of overland freight.
+
+Supply Chain Managment 
+
+
+## Freight Industry
+
+### Trucking 
+
+> **Revenue**
+`$738.9 billion in gross freight revenues` (primary shipments only) from trucking, representing 81.5% of the nation’s freight bill in 2016.
+
+> **Tonnage**
+`$10.55 billion tons of freight (primary shipments only)` transported by trucks in 2016, representing 70.9% of total domestic tonnage shipped.
+
+
+> **Number of Companies**
+According to the U.S. Department of Transportation, as of June 2017, the number of for-hire carriers on file with the Federal Motor Carrier Safety Administration totaled *777,240*.
+
+> `91% operate 6 or fewer trucks.`
+`97.3% operate fewer than 20 trucks.`
+
+
+#### Advances in Trucking Operations
+
+*Distributor Cross Docking*: This is where a distributor consolidates inbound products from various vendors into a mulit-SKU pallet, which is delivered as soon as the last product is received. Computer distributors often source components and consolidate them into one shipment in merge-in-transit centers before delivering them to the customer, and rarely have the same vendor for all the products. Think of a Desktop tower, a monitor, a keyboard, and mouse that are combined into one package at a cross-dock for delivery to the customer as a single package. 
+
+*Retail cross-docking*: This involves the consolidation of shipments from different shippers and vendors to be sorted onto outbound trucks for different stores. WalMart pioneered this system in the 1980s to gain a competitive advantage against competitors such as Sears or Kmart.
 
 
 #### Electronic Logging Device Mandate
@@ -113,7 +147,7 @@ So any violation in failing to comply with this new law could mean
 Four Driver Status Modes
 The choices of duty status when a property-carrying driver records his or her time on a record of duty status, or R.O.D.S
 
-> off duty | sleeper berth | driving | on duty/not driving |
+>  `off duty | sleeper berth | driving | on duty/not driving`
 
 
 
@@ -136,19 +170,11 @@ Add to these rules are the burdensome additional regulations such as when
 + Requires an off-duty break at some point during the duty period. The rule says that you may not drive a CMV if it has been 8 or more hours since your last off-duty period of at least 30 minutes.
 + For every 5 duty periods that they return to their starting point, they may choose one 16-hour duty period.
 + The counting of the maximum 60 or 70 hours on duty restarts anytime a driver has at least 34 consecutive hours off duty.
-                                                                                                        source: FMCSA 2018 
+
 
 [airtable-embed](https://airtable.com/embed/shrAK5qn8v7XOt5fq?backgroundColor=blue&viewControls=on ':include :type=iframe width=100% height=533x')
 
 
-<explainer paragraph>
-
-
-
-
-Distributor Cross Docking: This is where a distributor consolidates inbound products from various vendors into a mulit-SKU pallet, which is delivered as soon as the last product is received. Computer distributors often source components and consolidate them into one shipment in merge-in-transit centers before delivering them to the customer, and rarely have the same vendor for all the products. Think of a Desktop tower, a monitor, a keyboard, and mouse that are combined into one package at a cross-dock for delivery to the customer as a single package. 
-
-Retail cross-docking: This involves the consolidation of shipments from different shippers and vendors to be sorted onto outbound trucks for different stores. WalMart pioneered this system in the 1980s to gain a competitive advantage against competitors such as Sears or Kmart.
 
 
 
@@ -169,7 +195,7 @@ Our ecosystem includes a variety of solutions aimed at leveraging existing techn
 Our Ecosystem strives to cover these core competencies
 
 Compliance and Accountability
-Document  Authentication and Management
+Document Authentication and Management
 Data Forecasting, Insights and Analytics
 
 Our approach has been to offer clear use cases for blockchain applications. These are qualified by the following parameters
@@ -275,24 +301,37 @@ A company implementing EPCIS can use the authenticated identity of a trading par
 
 %primer on shipping documents
 
-We have two main shipping documents 
++ Bill of Lading
++ Letter of Credit
++ Certificate of Origin
++ Insurance Certificate
++ Packing List
++ Material Safety Datasheet
 
-<b> Bill of Lading </b> and <b> Letter of Credit </b>
+> Cosignee: Person/Business the shipment is intended for
 
-### Bill of Lading
+Bill of lading (BOL) is one of the most important documents in the shipping process. To ship any goods, a **bill of lading is required and acts as a receipt and a contract**. A completed BOL legally shows that the carrier has received the freight as described and is obligated to deliver that freight in good condition to the consignee.
+
+
+
+## Bill of Lading
 
 A Bill of Lading is a legal document issued by the Carrier or agent of the Carrier. They are the legal title to the cargo. It has three main attributes:  
 
 Document of Title to the goods: possession of the Bill of Lading is equal to having title in the referenced goods. 
 Receipt - Evidence that the Carrier has received the goods of a certain quality etc in compliance with the Commercial Contract between the parties
 Contract of Carriage - Evidence of the Contract of Carriage (CoC) - that the carrier will transport the goods in compliance with the Commercial Contract.
-Problems with the current system
 
-THEFT - BoL is a bearer document of title. This bears a particular risk that anyone who has possession of the BoL has a prima facie claim to the goods. Because possession equals ownership this creates an incentive for BoL theft. 
-FRAUD - Manipulation/alteration of BoL to hide accountability due to shipment damage or other issues.
-INEFFICIENCY - BoL are issued as three original physical documents. One document is managed by the banks involved in trade finance. One document is couriered to the recipient of the goods. And one document is retained by the Carrier. 
-PHYSICALITY - Delay in distribution of the BoLs. Due to the originals only existing in a physical form, this means that the Carrier has to courier one of the originals to the Consignee. This leads to a situation where the goods have arrived at a Discharge port but that the Consignee has not received their BoL. 
-AMENDMENTS - Making amendments to a BoL are complicated. All three BoLs have to be sent to the Carrier who destroys them then issues a new set of BoLs with the intended amendments. 
+#### Problems with the current system
+
+Theft - BoL is a bearer document of title. This bears a particular risk that anyone who has possession of the BoL has a prima facie claim to the goods. Because possession equals ownership this creates an incentive for BoL theft. 
+
+**Fraud** - Manipulation/alteration of BoL to hide accountability due to shipment damage or other issues.
+Inefficiency - BoL are issued as three original physical documents. One document is managed by the banks involved in trade finance. One document is couriered to the recipient of the goods. And one document is retained by the Carrier. 
+
+Physicality - Delay in distNribution of the BoLs. Due to the originals only existing in a physical form, this means that the Carrier has to courier one of the originals to the Consignee. This leads to a situation where the goods have arrived at a Discharge port but that the Consignee has not received their BoL. 
+
+Amendments - Making amendments to a BoL can be complicated. All three BoLs have to be sent to the Carrier who destroys them, then issues a new set of BoLs with the intended amendments. 
 
 
 %% INSERT BILL OF LADING GS1 SAMPLE IMAGE %% 
@@ -304,9 +343,13 @@ Inorder to design and implement enterprise-quality smart contracts, we need to d
 **Components**
 
 +Schema: the data elements required for the execution and fulfillment of contract obligations between counterparties and the cryptographic proofs needed to maintain the integrity and trust in the contract for the participating counterparties and any regulatory or oversight entities. 
+
 +Counterparties – authenticated identity that can utilize the same cryptographic primitives as blockchains like digital signatures, of participants (people, organizations and things) agreeing to the terms and execution of the contract. Counterparties are represented as personas in the logic of a contract that are assigned identity as the contract goes through its binding process.
+
 +External Sources – contracts that require external interaction, input of data or notification in order to fulfill the execution requirements of the contract. These external sources and conditions for interaction are agreed to by the counterparties and the regulatory oversight entities and must provide cryptographic proofs in order to trust and maintain the integrity these external sources. 
+
 +Ledger – the immutable instance on a distributed ledger (blockchain) based on the schema that is used to record all contract activities and proofs required. This is can be either the public version of a “distributed trustless truth database” or a “shared, permissioned, semi-trusted, discretionarily private, truth database”. 
+
 +Contract Binding - A Enterprise Smart Contract Binding is the composition of these parts creating a unique instance of an Enterprise Smart Contract. It is created when a contract begins negotiation between counterparties and becomes versioned and locked when each counterparty signs the contract. Once signed and locked the Enterprise Smart Contract begins the execution of the terms and conditions that lead to fulfillment.
 
 In order to develop Enterprise quality smart contracts standards need to be put in place. 
@@ -317,6 +360,11 @@ In order to develop Enterprise quality smart contracts standards need to be put 
 
 We can categorize  smart contracts into two distinct featuresets 
 > **Notification** and **Executing**
+
+## Parametric Smart Contracts
+
+As discussed in the previous section, there are two basic types of smart contracts: Notifying and Executing. These both fall into a category we call **Parametric** smart contracts.
+
 
 
 ## ChainProof - 
