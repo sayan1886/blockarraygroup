@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>Block Array - ChainProof API v0.0.6-2 </title>
+    <link 
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+    rel="stylesheet">
+ 
+</head>
+
+<body >
+    <!-- ChainProof API Script -->
+    <script type="text/javascript">
+    var font = document.createElement("link");
+    font.rel = "stylesheet";
+    font.href = "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800";
+    var portalStyle = document.createElement("link");
+    portalStyle.rel = "stylesheet";
+    portalStyle.href = "https://dxjs.apimatic.io/static/css/main.9b04753e.css";
+    var script = document.createElement("script");
+    script.src="https://dxjs.apimatic.io/static/js/portal.v4.js";
+    script.onload = function() {
+        APIMaticDevPortal.show({
+            container: "apimatic-widget",
+            portalStyle: "default",
+            topElementHeight: 0,
+            apiKey: "DGzfT4tQrkMUD78Px6z9F49btY4HD3Zi-sUtgsCJKZFVAcAWxeLIVJzHUO3HhbnH",
+            baseUrl: "https://apimatic.io",
+            enableExport: true,
+            allowedLanguages:[
+                "docs-http",
+                "ruby_generic_lib",
+                "node_javascript_lib",
+                "python_generic_lib"
+            ],
+            themeOverrides: {
+                palette:{
+                    primaryColor1:"#2981d2"
+                }
+            }
+        });
+    };
+    document.getElementsByTagName("head")[0].appendChild(portalStyle);
+    document.getElementsByTagName("head")[0].appendChild(script);
+    document.getElementsByTagName("head")[0].appendChild(font);
+</script>
+<div id="apimatic-widget" style="height:100%"/>
+</body>
+
+</html>
