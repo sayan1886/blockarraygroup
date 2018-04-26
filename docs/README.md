@@ -248,33 +248,26 @@ The ELD regulation provides for this, as both the original and edited versions m
 https://airtable.com/shrCzCmWXhYaIs4oX
 
 
-
-
-
-## Object Naming Service 
-
-In order to use DNS to find information about an item, the item’s GS1 Identification Key must be converted into a format that DNS can understand, which is the typical, “dot” delimited, left-to-right form of all domain names. As the purpose of ONS is to discover data and services associated with a GS1 Identification Key and multiple sets of data and services may exist for that key, the appropriate DNS record type is the Naming Authority PoinTeR (NAPTR) [RFC 3403]. This record type contains several fields for denoting the protocol, services, and features that a given service endpoint exposes. It also allows the service endpoint to be expressed as a URI, thus allowing complex services to be encoded in a standard way. The figure below describes a typical ONS query from start to finish from the viewpoint of an application. In this example, the starting point is a bar code or RFID tag. However, the source of the GS1 IdentificationKey is not restricted to data carriers; it could be part of a transaction document (e.g. a purchase order), an event record, a master data record, or any other source.
-
-
-
 ## EPCIS
 
 EPCIS – Electronic Product Code Information Service It is an international standard adopted by GS1 in September 2016 to Identify, Capture and Share Information using barcodes/etc. It enables disparate applications to leverage Electronic Product Code (EPC) data by sharing that data. The EPC data is shared within and across enterprise boundaries. Sharing this data enables all participants within an EPCIS compliant ecosystem to gain visibility into the status of all EPC “marked” digital or physical items (also known as EPCIS “objects”) within a given business context. Simply put, EPCIS provides a framework that allows trading partners to know the status of a given trade item or conveyance. 
 
+> GS1 is a non-profit org. that manages standards for the supply chain industry, including barcodes.
+
 EPCIS events affect the status of a trade item or conveyance by changing or setting the object’s disposition (its current state, such as sold, expired, recalled, in transit, or active). “EPCIS is a standard which provides the means to Identify real-world entities so that they may be the subject of electronic information that is stored and/or communicated by end users/clients. GS1 identification standards include standards that define unique identification codes (called GS1 Identification Keys), such as the Global Trade Item Number.” [GS1] 
 
-It provides the means to automatically Capture data that is carried directly on physical objects, bridging the world of physical things and the world of electronic information.” [GS1] GS1 data capture standards include definitions of bar code and radio-frequency identification (RFID) data carriers which allow identifiers to be affixed directly to a physical object, and standards that specify consistent interfaces to readers, printers, and other hardware and software components that connect the data carriers to business applications. 
+*GS1 data capture standards include definitions of bar code and radio-frequency identification (RFID).*
 
 It also provides the means to share information, both between trading partners and internally, providing the foundation for electronic business transactions, electronic visibility of the physical or digital world, and other information applications. GS1 standards for information sharing include this EPCIS Standard which is a standard for visibility event data. Other standards in the “Share” group are standards for master data and for business transaction data, as well as discovery standards that help locate where relevant data resides across a supply chain and trust standards that help establish the conditions for sharing data with adequate security.
 
-Description of EPCIS Event Data
+**Description of EPCIS Event Data**
 EPCIS is structured in a way to define business processes as individual business steps. Information of a single EPCIS event data is organized into four different dimensions:
 
 
-- What The identifiers of the object(s) or other entities that are the subject of the event 
-- When The date and time when the event took place, and the local time zone in effect 
-- Where The identifier of the location at which the event occurred, and identifier of the location where the object(s) are expected to be following the event 
--  Why Information about the business context, including: a identifier that indicates the business step taking place (e.g., shipping, receiving, etc.), an identifier that indicates the business state of the object(s) following the event (e.g., active, recalled, damaged, etc.), identifiers of the shipping and receiving parties (if the event is part of a process of transfer between parties), links to relevant business transaction documents (e.g., a purchase order, an invoice, etc.), instance- or lot-level master data, and/or other information defined via user extensions. 
+- **What** The identifiers of the object(s) or other entities that are the subject of the event 
+- **When** The date and time when the event took place, and the local time zone in effect 
+- **Where** The identifier of the location at which the event occurred, and identifier of the location where the object(s) are expected to be following the event 
+-  **Why** Information about the business context, including: a identifier that indicates the business step taking place (e.g., shipping, receiving, etc.), an identifier that indicates the business state of the object(s) following the event (e.g., active, recalled, damaged, etc.), identifiers of the shipping and receiving parties (if the event is part of a process of transfer between parties), links to relevant business transaction documents (e.g., a purchase order, an invoice, etc.), instance- or lot-level master data, and/or other information defined via user extensions. 
 
 The EPCIS data model calls for an identifier, EPCIS allows any URI/URL to be used to store additional data. We use this model because of interoperability with barcodes across the globe.
 
@@ -297,6 +290,14 @@ A company implementing EPCIS can use the authenticated identity of a trading par
 | Electronic Article Surveillance (EAS)               |
 | Promotion Tracking                                  |
 
+## Object Naming Service 
+
+In order to use DNS to find information about an item, the item’s GS1 Identification Key must be converted into a format that DNS can understand, which is the typical, “dot” delimited, left-to-right form of all domain names. As the purpose of ONS is to discover data and services associated with a GS1 Identification Key and multiple sets of data and services may exist for that key, the appropriate DNS record type is the Naming Authority PoinTeR (NAPTR) [RFC 3403]. This record type contains several fields for denoting the protocol, services, and features that a given service endpoint exposes. It also allows the service endpoint to be expressed as a URI, thus allowing complex services to be encoded in a standard way. 
+
+The figure below describes a typical ONS query from start to finish from the viewpoint of an application. In this example, the starting point is a bar code or RFID tag. However, the source of the GS1 IdentificationKey is not restricted to data carriers; it could be part of a transaction document (e.g. a purchase order), an event record, a master data record, or any other source.
+
+%% insert img %%
+
 ## Shipping Documents
 
 %primer on shipping documents
@@ -313,7 +314,6 @@ A company implementing EPCIS can use the authenticated identity of a trading par
 Bill of lading (BOL) is one of the most important documents in the shipping process. To ship any goods, a **bill of lading is required and acts as a receipt and a contract**. A completed BOL legally shows that the carrier has received the freight as described and is obligated to deliver that freight in good condition to the consignee.
 
 
-
 ## Bill of Lading
 
 A Bill of Lading is a legal document issued by the Carrier or agent of the Carrier. They are the legal title to the cargo. It has three main attributes:  
@@ -322,7 +322,7 @@ Document of Title to the goods: possession of the Bill of Lading is equal to hav
 Receipt - Evidence that the Carrier has received the goods of a certain quality etc in compliance with the Commercial Contract between the parties
 Contract of Carriage - Evidence of the Contract of Carriage (CoC) - that the carrier will transport the goods in compliance with the Commercial Contract.
 
-#### Problems with the current system
+### Problems with the current system
 
 Theft - BoL is a bearer document of title. This bears a particular risk that anyone who has possession of the BoL has a prima facie claim to the goods. Because possession equals ownership this creates an incentive for BoL theft. 
 
@@ -342,13 +342,13 @@ Inorder to design and implement enterprise-quality smart contracts, we need to d
 
 **Components**
 
-+Schema: the data elements required for the execution and fulfillment of contract obligations between counterparties and the cryptographic proofs needed to maintain the integrity and trust in the contract for the participating counterparties and any regulatory or oversight entities. 
++ Schema: the data elements required for the execution and fulfillment of contract obligations between counterparties and the cryptographic proofs needed to maintain the integrity and trust in the contract for the participating counterparties and any regulatory or oversight entities. 
 
-+Counterparties – authenticated identity that can utilize the same cryptographic primitives as blockchains like digital signatures, of participants (people, organizations and things) agreeing to the terms and execution of the contract. Counterparties are represented as personas in the logic of a contract that are assigned identity as the contract goes through its binding process.
++ Counterparties – authenticated identity that can utilize the same cryptographic primitives as blockchains like digital signatures, of participants (people, organizations and things) agreeing to the terms and execution of the contract. Counterparties are represented as personas in the logic of a contract that are assigned identity as the contract goes through its binding process.
 
-+External Sources – contracts that require external interaction, input of data or notification in order to fulfill the execution requirements of the contract. These external sources and conditions for interaction are agreed to by the counterparties and the regulatory oversight entities and must provide cryptographic proofs in order to trust and maintain the integrity these external sources. 
++ External Sources – contracts that require external interaction, input of data or notification in order to fulfill the execution requirements of the contract. These external sources and conditions for interaction are agreed to by the counterparties and the regulatory oversight entities and must provide cryptographic proofs in order to trust and maintain the integrity these external sources. 
 
-+Ledger – the immutable instance on a distributed ledger (blockchain) based on the schema that is used to record all contract activities and proofs required. This is can be either the public version of a “distributed trustless truth database” or a “shared, permissioned, semi-trusted, discretionarily private, truth database”. 
++ Ledger – the immutable instance on a distributed ledger (blockchain) based on the schema that is used to record all contract activities and proofs required. This is can be either the public version of a “distributed trustless truth database” or a “shared, permissioned, semi-trusted, discretionarily private, truth database”. 
 
 +Contract Binding - A Enterprise Smart Contract Binding is the composition of these parts creating a unique instance of an Enterprise Smart Contract. It is created when a contract begins negotiation between counterparties and becomes versioned and locked when each counterparty signs the contract. Once signed and locked the Enterprise Smart Contract begins the execution of the terms and conditions that lead to fulfillment.
 
@@ -373,7 +373,7 @@ For example, if a screwdriver manufacturer creates a new screwdriver, they could
 Then, once sold and shipped to a distributor, a transaction transfers ownership of the tokenized screwdriver to the distributor (public key). This transfer of ownership is confirmed by signing the transaction with the same digital signature of the manufacturer. 
 The distributor can repeat the same exercise using their keys when selling the asset in the future, documenting the lineage of that screwdriver as it navigates the supply chain.
 
-
+erc721
 Tokenization and signing with public/private key pairs in the blockchain world establishes provenance, documenting the moment a thing is recorded.
 Public key can be used to support buying, selling, trading, insuring and tracking of things across organizations thus creating a full audit trail of the tokenized object itself, or lineage.
 
