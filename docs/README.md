@@ -101,7 +101,8 @@ We can divde the logistics industry into three (3) segments: Land, Air and Sea.
 
 Of these market segments, land (overland freight) compromises the largest share, with Trucking being the largest segment of overland freight.
 
-Supply Chain Managment 
+> Supply Chain Managment main goal is: **Demand Forecasting**
+
 
 
 ## Freight Industry
@@ -123,6 +124,8 @@ According to the U.S. Department of Transportation, as of June 2017, the number 
 
 
 #### Advances in Trucking Operations
+
+While many have touted the arrival of autnomous driving vehicles, drones, and even electric tractors, most advances in trucking have been in *how* the distribution of goods happens in the supply chain. Cross Docking operations have given certain companies a competitive advantage when it comes to their operations, so much so that they have been able to drive sucess from it.
 
 *Distributor Cross Docking*: This is where a distributor consolidates inbound products from various vendors into a mulit-SKU pallet, which is delivered as soon as the last product is received. Computer distributors often source components and consolidate them into one shipment in merge-in-transit centers before delivering them to the customer, and rarely have the same vendor for all the products. Think of a Desktop tower, a monitor, a keyboard, and mouse that are combined into one package at a cross-dock for delivery to the customer as a single package. 
 
@@ -194,9 +197,15 @@ Our ecosystem includes a variety of solutions aimed at leveraging existing techn
 
 Our Ecosystem strives to cover these core competencies
 
-Compliance and Accountability
-Document Authentication and Management
-Data Forecasting, Insights and Analytics
++ Compliance and Accountability
++ Document Authentication and Management
++ Data Forecasting, Insights and Analytics
+
+which derives into our offerings:
+
+ChainProof
+Freight Relay
+Passports
 
 Our approach has been to offer clear use cases for blockchain applications. These are qualified by the following parameters
 
@@ -271,8 +280,8 @@ EPCIS is structured in a way to define business processes as individual business
 
 The EPCIS data model calls for an identifier, EPCIS allows any URI/URL to be used to store additional data. We use this model because of interoperability with barcodes across the globe.
 
-Why EPCIS is important
-EPCIS Event Data The Core Business Vocabulary (CBV) is a GS1 Standard that defines specific data values to populate the EPCIS data model. This ensures that all parties who exchange EPCIS data have a common and consistent understanding of the semantic meaning of that information. [GS1] By documenting supply chain events, EPCIS data complements other types of data exchange in the supply chain, such as business transaction data (exchanged with GS1 eCom) and master data (exchanged with GS1 Global Data Synchronization Network or GDSN).
+**Why EPCIS is important**
+EPCIS Event Data The Core Business Vocabulary (CBV) is a GS1 Standard that defines specific data values to populate the EPCIS data model. This ensures that all parties who exchange EPCIS data have a common and consistent understanding of the semantic meaning of that information. [GS1] *By documenting supply chain events, EPCIS data complements other types of data exchange in the supply chain, such as business transaction data (exchanged with GS1 eCom) and master data (exchanged with GS1 Global Data Synchronization Network or GDSN).
 
 
 > EPCIS provides visibility on a “need-to-know” basis for goods.
@@ -329,9 +338,9 @@ Theft - BoL is a bearer document of title. This bears a particular risk that any
 **Fraud** - Manipulation/alteration of BoL to hide accountability due to shipment damage or other issues.
 Inefficiency - BoL are issued as three original physical documents. One document is managed by the banks involved in trade finance. One document is couriered to the recipient of the goods. And one document is retained by the Carrier. 
 
-Physicality - Delay in distNribution of the BoLs. Due to the originals only existing in a physical form, this means that the Carrier has to courier one of the originals to the Consignee. This leads to a situation where the goods have arrived at a Discharge port but that the Consignee has not received their BoL. 
+**Physicality** - Delay in distNribution of the BoLs. Due to the originals only existing in a physical form, this means that the Carrier has to courier one of the originals to the Consignee. This leads to a situation where the goods have arrived at a Discharge port but that the Consignee has not received their BoL. 
 
-Amendments - Making amendments to a BoL can be complicated. All three BoLs have to be sent to the Carrier who destroys them, then issues a new set of BoLs with the intended amendments. 
+**Amendments** - Making amendments to a BoL can be complicated. All three BoLs have to be sent to the Carrier who destroys them, then issues a new set of BoLs with the intended amendments. 
 
 
 %% INSERT BILL OF LADING GS1 SAMPLE IMAGE %% 
