@@ -2,11 +2,26 @@
 
 
 # Block Array White Paper
-**version 2.1.5**
+
 
 !> **Warning** This is in progress, and may have breaking issues
 
 :warning: Many features are to be added, with graphics being the last. Spelling errors are to be expected
+
+---
+
+**version 2.1.9**
+
+Author: Sam Bacha *Founder*
+
+ToDo:
+Replace maths with LaTeX formating
+Insert graphics 
+Refine formating 
+Check Spelling and Grammer
+have editorial process completed
+Flesh out industry scope (pharma, defense)
+Insert in-line citations and import references 
 
 ## Introduction
 
@@ -53,22 +68,24 @@ Table of Contents
 
 
 ----------
-
-
-
-
-
-this section left intentionally blank 
-
-
-
-
-
-
+>
+>
+>
+>
+>
+>
+>this section left intentionally blank 
+>
+>
+>
+>
+>
+>
+>
 ----------
 
 
-[![](https://img.shields.io/badge/whitepaper-v2.1.5-lightgrey.svg)](https://github.com/blockarraygroup/blockarraygroup)
+[![](https://img.shields.io/badge/whitepaper-v2.1.9-lightgrey.svg)](https://github.com/blockarraygroup/blockarraygroup)
 
 
 [![](https://img.shields.io/badge/telegram-group-blue.svg)](https://t.me/Block_Array)
@@ -482,25 +499,7 @@ most frequently used smart contracts should be supported natively by the blockch
 Avoid Hashes, Assign IDs Instead
 
 
-### Decentralization
-
-| Application | How Much  | Level | Grade |
--------------------------------------------
-| Virtual Currency | High | State Actors (i.e Multiple Governments) | Global
-| Financial Instruments | Medium-High | Nation
-| Applications  | Medium | Other Corporations (e.g. competitors) | Industry
-| Non-critical Applications | Low-Medium | Malcious Agents (e.g. Hackers) | Platform
-
-Global
-Nation
-Industry
-Platform
-
-
-References:
-[BitShares 2.0 Documentation](https://bitshares.org/technology/industrial-performance-and-scalability/)
-
-### Transaction Size
+**Transaction Size**
 
 Transaction Size (bytes) X Transactions Processed (seconds)
 becomes clear that transaction size directly impacts the block interval, and therefore the confirmation latency.
@@ -665,7 +664,6 @@ Calculating Terminal Value as `cash flow / discount rate` and assuming a discoun
 **Service Tokens** trend towards a **multiple of operating cash flow**
 
 > *Note* while this model holds true for pure service commodities, an argument can be made that it is applicable in drawing a close approximation in our use case as *service providers* provide the service of network security and uptime (i.e. they host part of the network)
-
 
 
 #### Establishing an Econometric Model
