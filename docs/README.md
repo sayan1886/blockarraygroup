@@ -518,6 +518,18 @@ Account Identifiers
 
 paragraph 
 
+### Calculating Node Reputation 
+
+Developing a benchmark to calculate malicous nodes 
+
+**Eigenvector Centraility**
+` equation1 here `
+
+**Max-Flow Analysis**
+` Equation2 here `
+
+Node Reputation 
+` function of Equation1+2 here `
 
 
 ### RBFT 
