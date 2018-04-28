@@ -599,6 +599,7 @@ The amount of ARY tokens is preliminary and has not been finalized yet
 ` X = Tokens Staked by User `
 ` Z = Resource Modifier defined by Price Function of ARY Token `
 
+.
 
 *Figure 1*
 | Resources | # of ARY Tokens |
