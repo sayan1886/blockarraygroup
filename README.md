@@ -477,7 +477,18 @@ Account Identifiers
 
 paragraph 
 
+## Calculating Node Reputation 
 
+Developing a benchmark to calculate malicous nodes 
+
+**Eigenvector Centraility**
+` equation1 here `
+
+**Max-Flow Analysis**
+` Equation2 here `
+
+Node Reputation 
+` function of Equation1+2 here `
 
 ### RBFT 
 As described in their paper, existing BFT protocols use a special replica, called the "primary", which indicates to other replicas the order in which requests should be processed. This primary can be smartly malicious and degrade the performance of the system without being detected by correct replicas. Our evaluation shows that RBFT achieves similar performance as the most robust protocols when there is no failure and that, under faults, its maximum performance degradation is about 3%, whereas it is, at least, equal to 78% for existing protocols."
