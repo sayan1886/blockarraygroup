@@ -93,7 +93,13 @@ this section left intentionally blank
 
 Global operations need consistent global standards to be applied across their supply chain, and this is only going to become increasingly difficult with legacy enterprise systems and increased legal costs. Laws recently passed like The California Transparency Supply Chain Act or the Electronic Logging Data Mandate for Trucking add additional burdens to businesses trying to comply with the law, coupled with more demands on increasingly outdated IT systems - this then creates multiple problems for firms. 
 
+This document is broken up into  # main sections.
 
+1. Logistics and Supply Chain Industry Overview
+2. Areas of Improvement 
+3. Our Ecosystem
+4. Implementation of our Ecosystem
+5. Corporate Overview
 
 # Logistics & Supply Chain Managment
 
@@ -201,19 +207,16 @@ Our Ecosystem strives to cover these core competencies
 + Document Authentication and Management
 + Data Forecasting, Insights and Analytics
 
-which derives into our offerings:
-
-ChainProof
-Freight Relay
-Passports
+FreightRelay: 
+ChainProof: API for Inter-Blockchain Connectivity
+Driver & Vehicle Passports
+SmartQR: Barcodes (1D/2D)
 
 Our approach has been to offer clear use cases for blockchain applications. These are qualified by the following parameters
 
 Strong case for Data Ownership
 Trust-less Record Keeping
 Removal of “middlemen” 
-<additional>
-<additional>
 
 Therefore our product listings are:
 Passports for Drivers, Vehicles and Assets
@@ -345,6 +348,32 @@ Inefficiency - BoL are issued as three original physical documents. One document
 
 %% INSERT BILL OF LADING GS1 SAMPLE IMAGE %% 
 
+## Visual SmartContracts - Document Mgmt
+
+The modern logistics pipeline has many moving pieces with paperwork for each leg of the journey. 
+
++ Signatures
++ Imaging
++ Invoice
++ Indexing
++ Proposals
++ Certificates
++ Manifests 
+
+For "legacy" paper documents, we can digitze and deliver them to all parties
+
+easily collect data, populate a document and send it to any contact automatically
+
+Permissions
+Policy
+Events 
+
+#### Connected Documents 
+
+Scanning of the document 
+
+
+User Permission -> User Action -> User Event 
 
 ### Enterprise Smart Contracts
 Inorder to design and implement enterprise-quality smart contracts, we need to define exactly what an enterprise smart contract is. We shall decompose this concept into its major components below:
@@ -370,7 +399,7 @@ In order to develop Enterprise quality smart contracts standards need to be put 
 We can categorize  smart contracts into two distinct featuresets 
 > **Notification** and **Executing**
 
-## Parametric Smart Contracts
+#### Parametric Smart Contracts
 
 As discussed in the previous section, there are two basic types of smart contracts: Notifying and Executing. These both fall into a category we call **Parametric** smart contracts.
 
@@ -442,6 +471,40 @@ Our requirements list:
 - Consensus -a Byzantine Fault Tolerant (BFT) consensus protocol, PBFT or RBFT.
 
 
+## Design Considerations: Creating a High-Performance Blockchain
+
+Conducting a industry-wide search of the literature on creating a performant blockchain network has yeiled several specifications on acheiving a **high performing**, **scalable**, **secure**, and **robust** blockchain network.
+
+
+Integrate oft-used Applications 
+most frequently used smart contracts should be supported natively by the blockchain, leaving only the rarely-used custom contracts to run in a virtual machine. 
+
+Avoid Hashes, Assign IDs Instead
+
+
+### Decentralization
+
+| Application | How Much  | Level | Grade |
+-------------------------------------------
+| Virtual Currency | High | State Actors (i.e Multiple Governments) | Global
+| Financial Instruments | Medium-High | Nation
+| Applications  | Medium | Other Corporations (e.g. competitors) | Industry
+| Non-critical Applications | Low-Medium | Malcious Agents (e.g. Hackers) | Platform
+
+Global
+Nation
+Industry
+Platform
+
+
+References:
+[BitShares 2.0 Documentation](https://bitshares.org/technology/industrial-performance-and-scalability/)
+
+### Transaction Size
+
+Transaction Size (bytes) X Transactions Processed (seconds)
+becomes clear that transaction size directly impacts the block interval, and therefore the confirmation latency.
+
 
 ## Implementation 
 
@@ -454,6 +517,20 @@ Data Storage
 Account Identifiers 
 
 paragraph 
+
+### Calculating Node Reputation 
+
+Developing a benchmark to calculate malicous nodes 
+
+**Eigenvector Centraility**
+` equation1 here `
+
+**Max-Flow Analysis**
+` Equation2 here `
+
+Node Reputation 
+` function of Equation1+2 here `
+
 
 ### RBFT 
 As described in their paper, existing BFT protocols use a special replica, called the "primary", which indicates to other replicas the order in which requests should be processed. This primary can be smartly malicious and degrade the performance of the system without being detected by correct replicas. Our evaluation shows that RBFT achieves similar performance as the most robust protocols when there is no failure and that, under faults, its maximum performance degradation is about 3%, whereas it is, at least, equal to 78% for existing protocols."
@@ -566,8 +643,28 @@ The amount of ARY tokens is preliminary and has not been finalized yet
 | Heartbeat | 7,500           |
 
 
+#### Keeping the ERC-20 Token 
 
-Mitigating Attack Vectors
+**The ERC-20 Token is the asset used**, in other words *there is no "conversion" to another digital asset needed* under our system
+
+` R = [X / square root(Z)] `
+` R = Resources (transactions, queries, etc) available per 24h period `
+` X = Tokens Staked by User `
+` Z = Resource Modifier defined by Price Function of ARY Token `
+
+
+*Figure 1*
+| Resources | # of ARY Tokens |
+| --------- | --------------- |
+| 500       | 5,000           |
+| 100.      | 1,000           |
+| 50.       | 500.            |
+
+
+> The variable 'Z' Price Function will be finalized upon the completion of market research and communtiy input, and is not a perment constant 
+
+
+#### Mitigating Attack Vectors
 
 By distributing the network among individuals who have our ARY token, they reduce the chance of businesses being able to form a cartel for the purpose of disrupting the network. 
 
