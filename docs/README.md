@@ -518,18 +518,9 @@ Account Identifiers
 
 paragraph 
 
-### Calculating Node Reputation 
 
-Developing a benchmark to calculate malicous nodes 
 
-**Eigenvector Centraility**
-` equation1 here `
-
-**Max-Flow Analysis**
-` Equation2 here `
-
-Node Reputation 
-` function of Equation1+2 here `
+### Snow White
 
 
 ### RBFT 
@@ -620,7 +611,7 @@ Following configuration controls frequency of the leader heartbeat messages:
 
 
 
-### ARY Token
+## ARY Token
   
 
 The Block Array Token, "ARY" is an Ethereum standard compliant "ERC-20" blockchain asset. The asset is our implementation of a software license that is used in a variety of ways for the end customer. The ARY token can be thought of as an access card, granting the end user the ability to interact with various applications and infrastructure. The ARY token enables the user rights of access depending on the amount of tokens they have in their possession. Along with access rights they are granted an allotment of network resources based on the amount of ARY held.
@@ -642,6 +633,44 @@ The amount of ARY tokens is preliminary and has not been finalized yet
 | Secondary | 22,500          |
 | Heartbeat | 7,500           |
 
+### Token Implementation 
+
+
+#### Token Use Case: Maximizing Token Value
+
+There are three (3) main token economic models:
+
+Payment Token
+Service Token
+2-Way Token (Burn-and-Mint Equilibrium)
+
+In a monetary base, valuation is obtained through the *equation of exchange* which is defined as `MV=PQ` where `V` is *velocity*.
+
+In designing a token model in which *value* increases with *network usage* we can claim that as *v* increases *Price,p* accelerates in the downward slope (i.e. negative price pressure)
+
+A Service Token is one in which a user "stakes" or "bonds" the token of the network in order to provide *services* to the network, such as file storage (Storj, Filecoin), computation power (Golem), or -etc-. 
+
+So, as demand for the service grows and a fixed supply (*ceterus paribus*) the price per token will increase as more users wish to provide services. This can be modeled by NPV;
+
+> **Net Present Value**
+
+`NPV = sumation{ }`
+
+Calculating Terminal Value as `cash flow / discount rate` and assuming a discount rate of *40%* and an operating margin of 25% we can derive a potential value as:
+
+{ valuation formula }
+
+**Currency Tokens** trend towards a **fractional value of transaction volume**
+
+**Service Tokens** trend towards a **multiple of operating cash flow**
+
+> *Note* while this model holds true for pure service commodities, an argument can be made that it is applicable in drawing a close approximation in our use case as *service providers* provide the service of network security and uptime (i.e. they host part of the network)
+
+
+
+#### Establishing an Econometric Model
+
+%% GRAPH %%
 
 #### Keeping the ERC-20 Token 
 
@@ -663,6 +692,18 @@ The amount of ARY tokens is preliminary and has not been finalized yet
 
 > The variable 'Z' Price Function will be finalized upon the completion of market research and communtiy input, and is not a perment constant 
 
+#### Calculating Node Reputation 
+
+Developing a benchmark to calculate malicous nodes 
+
+**Eigenvector Centraility**
+` equation1 here `
+
+**Max-Flow Analysis**
+` Equation2 here `
+
+Node Reputation 
+` function of Equation1+2 here `
 
 #### Mitigating Attack Vectors
 
@@ -692,6 +733,21 @@ Requirements
   3. Performance Benchmarks
 
 
+
+### Octopus 
+
+`struct block_header
+{
+digest_type digest()const;
+block_id_type previous;
+uint32_t block_num()const { return num_from_id(previous) +
+˓→1; }
+fc::time_point_sec timestamp;
+witness_id_type witness;
+checksum_type transaction_merkle_root;
+extensions_type extensions;
+static uint32_t num_from_id(const block_id_type& id);
+};`
 
 ----------
 
