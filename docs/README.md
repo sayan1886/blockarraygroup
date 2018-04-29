@@ -599,7 +599,7 @@ where $$\sigma$$ is the amount of Secondary and $$\alpha$$ is the amount of Prim
 
 Heartbeat nodes are specific network participants for the gossip protocol. They are responsible for the ordering of transactions.
 
-Dynamic leader election
+**Dynamic leader election**
 Dynamic leader election enables organization peers to elect one peer which will connect to the ordering service and pull out new blocks. Leader is elected for set of peers for each organization independently.
 Elected leader is responsible to send the heartbeat messages to the rest of the peers as an evidence of liveness. If one or more peers won’t get heartbeats updates during period of time, they will initiate a new round of leader election procedure, eventually selecting a new leader. In case of a network partition in the worst case there will be more than one active leader for organization thus to guarantee resiliency and availability allowing the organization’s peers to continue making progress. After the network partition is healed one of the leaders will relinquish its leadership, therefore in steady state and in no presence of network partitions for each organization there will be only one active leader connecting to the ordering service.
 Following configuration controls frequency of the leader heartbeat messages:
@@ -634,6 +634,17 @@ The amount of ARY tokens is preliminary and has not been finalized yet
 
 ### Token Implementation 
 
+In order to establish a token to distribute the network a **Token Generation Event** is required. The token *must* have a value in order for it to be useful in safeguarding the network and for creating the incentives for individuals to participate in hosting the network.
+
+ARY, the Ethereum Token we have created is based on a standard that has been accpeted by the community through an EIP (Ethereum Improvement Proposal) called `ERC-20`
+
+> to read the full standards reference visit the [ethereum github](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md)
+
+Symbol: ARY
+Decimals: 18
+Address: 0xa5F8fC0921880Cb7342368BD128eb8050442B1a1
+
+
 
 #### Token Use Case: Maximizing Token Value
 
@@ -664,6 +675,7 @@ Calculating Terminal Value as `cash flow / discount rate` and assuming a discoun
 **Service Tokens** trend towards a **multiple of operating cash flow**
 
 > *Note* while this model holds true for pure service commodities, an argument can be made that it is applicable in drawing a close approximation in our use case as *service providers* provide the service of network security and uptime (i.e. they host part of the network)
+
 
 
 #### Establishing an Econometric Model
