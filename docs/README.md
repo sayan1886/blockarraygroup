@@ -363,34 +363,35 @@ Inefficiency - BoL are issued as three original physical documents. One document
 **Amendments** - Making amendments to a BoL can be complicated. All three BoLs have to be sent to the Carrier who destroys them, then issues a new set of BoLs with the intended amendments. 
 
 
-%% INSERT BILL OF LADING GS1 SAMPLE IMAGE %% 
-
-## Visual SmartContracts - Document Mgmt
-
-The modern logistics pipeline has many moving pieces with paperwork for each leg of the journey. 
-
-+ Signatures
-+ Imaging
-+ Invoice
-+ Indexing
-+ Proposals
-+ Certificates
-+ Manifests 
-
-For "legacy" paper documents, we can digitze and deliver them to all parties
-
-easily collect data, populate a document and send it to any contact automatically
-
-Permissions
-Policy
-Events 
-
-#### Connected Documents 
-
-Scanning of the document 
+![alt text](https://s3.amazonaws.com/blockarray-hosting/static/whitepaper_imgs/gs1_bol.png "Bill of Lading, GS1")
 
 
-User Permission -> User Action -> User Event 
+Many attempts have been made at modernizing shipping documents, and the shipping industry as a whole. Yet there are vestiages of poorly implemented solutions such as EDI (Electronic Data Interchange) and the widespread use of XML that still plague the industry. Electronic document management is not a new solution, especially in the logistics/shipping industry. Yet the issue that has prevented bills of lading and other shipping documents from *truely* taking hold is uniqueness. Since a title is suppose to be unique, a physical, paper bill of lading have always been required as digital documents had, until now, been unable to retain that crucial property of being unique. Having a blockchain-based bill of lading can solve this issue, and all the issues we have listed in the previous section.
+
+> Digital Scarcity is the property required for a digital bill of lading being able to truely suceeed in the logistics/shipping industry
+
+Our solution, **Visual SmartContracts** is an application that allows users to create a smart contract based document like a bill of lading. 
+
+#### Visual SmartContracts 
+
+Visual SmartContracts implements the following
+
+!> **Warning** Some features may not be implemented depending on user feedback/product market fit
+
++ WYSIWYG Form/Text Editor
++ Define user policies to implement EPCIS events
++ Import existing documents 
++ Create new documents
++ API to automate field imports
++ API to notify/trigger users/events
++ Document Signing using PKI/Legacy Signatures
++ Advanced Meta-data collection
++ 100% Privacy
++ 100% Standards compliant (GS1, SSAC, etc)
++ Unique Physical Document Authentication and Tracking
++ Foreign Language Localization Support (UTF-8, RTL, etc)
+
+Once a Bill of Lading is transfered from one user to another, the original user will not be able to modify the bill of lading, and will only retain a generated copy after the transfer for their records.
 
 ### Enterprise Smart Contracts
 Inorder to design and implement enterprise-quality smart contracts, we need to define exactly what an enterprise smart contract is. We shall decompose this concept into its major components below:
@@ -405,7 +406,7 @@ Inorder to design and implement enterprise-quality smart contracts, we need to d
 
 + Ledger – the immutable instance on a distributed ledger (blockchain) based on the schema that is used to record all contract activities and proofs required. This is can be either the public version of a “distributed trustless truth database” or a “shared, permissioned, semi-trusted, discretionarily private, truth database”. 
 
-+Contract Binding - A Enterprise Smart Contract Binding is the composition of these parts creating a unique instance of an Enterprise Smart Contract. It is created when a contract begins negotiation between counterparties and becomes versioned and locked when each counterparty signs the contract. Once signed and locked the Enterprise Smart Contract begins the execution of the terms and conditions that lead to fulfillment.
++ Contract Binding - A Enterprise Smart Contract Binding is the composition of these parts creating a unique instance of an Enterprise Smart Contract. It is created when a contract begins negotiation between counterparties and becomes versioned and locked when each counterparty signs the contract. Once signed and locked the Enterprise Smart Contract begins the execution of the terms and conditions that lead to fulfillment.
 
 In order to develop Enterprise quality smart contracts standards need to be put in place. 
 + Universal Business Langauge 
@@ -644,7 +645,19 @@ Symbol: ARY
 Decimals: 18
 Address: 0xa5F8fC0921880Cb7342368BD128eb8050442B1a1
 
+**Difference between an ICO and a TGE**
+An ICO, *initial coin offering*, has some charateristics different than what we consider a TGE, *token generation event*, such as:
 
++ Supply of coins/tokens is determined no matter if contribution amount hits hardcap
++ Coin/Token is used for proprietary payment 
++ Coin/Token is eventually replaced with a native on-chain asset 
++ Coin/Token is itself the "application"
+
+The ARY Token is different in that:
++ Token supply is generated only when *contributions* are sent to the smart contract 
++ Token is *not* used for payment of services, rather is used as a *license* 
++ Token is *not* replaced with a native on-chain asset
++ Token is *not* itself the application, rather enables access to multiple applications
 
 #### Token Use Case: Maximizing Token Value
 
@@ -666,15 +679,7 @@ So, as demand for the service grows and a fixed supply (*ceterus paribus*) the p
 
 > **Net Present Value**
 
-![](https://www.dropbox.com/s/xthkwwbb6rvm6j8/net_present.svg?dl=0)
-
-Calculating Terminal Value as
-[![](https://www.dropbox.com/s/ii8e3dgbpzul0wz/terminal_value.png?dl=0)]
-
-
-assuming a discount rate of *40%* and an operating margin of 25% we can derive a potential value as:
-
-{ valuation formula }
+![alt text](https://s3.amazonaws.com/blockarray-hosting/static/whitepaper_imgs/net_present.svg "Net Present Value Formula")
 
 **Currency Tokens** trend towards a **fractional value of transaction volume**
 
@@ -691,21 +696,20 @@ assuming a discount rate of *40%* and an operating margin of 25% we can derive a
 
 **The ERC-20 Token is the asset used**, in other words *there is no "conversion" to another digital asset needed* under our system
 
-` R = [X / square root(Z)] `
-` R = Resources (transactions, queries, etc) available per 24h period `
-` X = Tokens Staked by User `
-` Z = Resource Modifier defined by Price Function of ARY Token `
+![](https://s3.amazonaws.com/blockarray-hosting/static/whitepaper_imgs/resource_eq.png)
 
-
-*Figure 1*
-| Resources | # of ARY Tokens |
-| --------- | --------------- |
-| 500       | 5,000           |
-| 100.      | 1,000           |
-| 50.       | 500.            |
+` R = [X / square root(Z)] `<br>
+` R = Resources (transactions, queries, etc) available per 24h period `<br>
+` X = Tokens Staked by User `<br>
+` Z = Resource Modifier defined by Price Function of ARY Token `<br>
 
 
 > The variable 'Z' Price Function will be finalized upon the completion of market research and communtiy input, and is not a perment constant 
+
+
+<center>*Example*</center>
+
+![alt text](https://s3.amazonaws.com/blockarray-hosting/static/whitepaper_imgs/network_resources_table.png "Preliminary Staking")
 
 #### Calculating Node Reputation 
 
