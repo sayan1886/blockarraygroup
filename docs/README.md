@@ -301,7 +301,7 @@ EPCIS is structured in a way to define business processes as individual business
 The EPCIS data model calls for an identifier, EPCIS allows any URI/URL to be used to store additional data. We use this model because of interoperability with barcodes across the globe.
 
 **Why EPCIS is important**
-EPCIS Event Data The Core Business Vocabulary (CBV) is a GS1 Standard that defines specific data values to populate the EPCIS data model. This ensures that all parties who exchange EPCIS data have a common and consistent understanding of the semantic meaning of that information. [GS1] *By documenting supply chain events, EPCIS data complements other types of data exchange in the supply chain, such as business transaction data (exchanged with GS1 eCom) and master data (exchanged with GS1 Global Data Synchronization Network or GDSN).
+EPCIS Event Data The Core Business Vocabulary (CBV) is a GS1 Standard that defines specific data values to populate the EPCIS data model. This ensures that all parties who exchange EPCIS data have a common and consistent understanding of the semantic meaning of that information. [GS1] By documenting supply chain events, EPCIS data complements other types of data exchange in the supply chain, such as business transaction data (exchanged with GS1 eCom) and master data (exchanged with GS1 Global Data Synchronization Network or GDSN).
 
 
 > EPCIS provides visibility on a “need-to-know” basis for goods.
@@ -656,6 +656,8 @@ Service Token
 
 In a monetary base, valuation is obtained through the *equation of exchange* which is defined as `MV=PQ` where `V` is *velocity*.
 
+![](https://www.dropbox.com/s/ls37aojppwmtpcl/mv_pq.svg?dl=0)
+
 In designing a token model in which *value* increases with *network usage* we can claim that as *v* increases *Price,p* accelerates in the downward slope (i.e. negative price pressure)
 
 A Service Token is one in which a user "stakes" or "bonds" the token of the network in order to provide *services* to the network, such as file storage (Storj, Filecoin), computation power (Golem), or -etc-. 
@@ -664,9 +666,13 @@ So, as demand for the service grows and a fixed supply (*ceterus paribus*) the p
 
 > **Net Present Value**
 
-`NPV = sumation{ }`
+![](https://www.dropbox.com/s/xthkwwbb6rvm6j8/net_present.svg?dl=0)
 
-Calculating Terminal Value as `cash flow / discount rate` and assuming a discount rate of *40%* and an operating margin of 25% we can derive a potential value as:
+Calculating Terminal Value as
+[![](https://www.dropbox.com/s/ii8e3dgbpzul0wz/terminal_value.png?dl=0)]
+
+
+assuming a discount rate of *40%* and an operating margin of 25% we can derive a potential value as:
 
 { valuation formula }
 
@@ -675,7 +681,6 @@ Calculating Terminal Value as `cash flow / discount rate` and assuming a discoun
 **Service Tokens** trend towards a **multiple of operating cash flow**
 
 > *Note* while this model holds true for pure service commodities, an argument can be made that it is applicable in drawing a close approximation in our use case as *service providers* provide the service of network security and uptime (i.e. they host part of the network)
-
 
 
 #### Establishing an Econometric Model
