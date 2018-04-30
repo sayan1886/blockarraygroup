@@ -666,7 +666,7 @@ So, as demand for the service grows and a fixed supply (*ceterus paribus*) the p
 
 > **Net Present Value**
 
-![](https://www.dropbox.com/s/xthkwwbb6rvm6j8/net_present.svg?dl=0)
+![alt text](https://s3.amazonaws.com/blockarray-hosting/static/whitepaper_imgs/net_present.svg "Net Present Value Formula")
 
 Calculating Terminal Value as
 [![](https://www.dropbox.com/s/ii8e3dgbpzul0wz/terminal_value.png?dl=0)]
