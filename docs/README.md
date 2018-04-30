@@ -301,7 +301,7 @@ EPCIS is structured in a way to define business processes as individual business
 The EPCIS data model calls for an identifier, EPCIS allows any URI/URL to be used to store additional data. We use this model because of interoperability with barcodes across the globe.
 
 **Why EPCIS is important**
-EPCIS Event Data The Core Business Vocabulary (CBV) is a GS1 Standard that defines specific data values to populate the EPCIS data model. This ensures that all parties who exchange EPCIS data have a common and consistent understanding of the semantic meaning of that information. [GS1] *By documenting supply chain events, EPCIS data complements other types of data exchange in the supply chain, such as business transaction data (exchanged with GS1 eCom) and master data (exchanged with GS1 Global Data Synchronization Network or GDSN).
+EPCIS Event Data The Core Business Vocabulary (CBV) is a GS1 Standard that defines specific data values to populate the EPCIS data model. This ensures that all parties who exchange EPCIS data have a common and consistent understanding of the semantic meaning of that information. [GS1] By documenting supply chain events, EPCIS data complements other types of data exchange in the supply chain, such as business transaction data (exchanged with GS1 eCom) and master data (exchanged with GS1 Global Data Synchronization Network or GDSN).
 
 
 > EPCIS provides visibility on a “need-to-know” basis for goods.
@@ -599,7 +599,7 @@ where $$\sigma$$ is the amount of Secondary and $$\alpha$$ is the amount of Prim
 
 Heartbeat nodes are specific network participants for the gossip protocol. They are responsible for the ordering of transactions.
 
-Dynamic leader election
+**Dynamic leader election**
 Dynamic leader election enables organization peers to elect one peer which will connect to the ordering service and pull out new blocks. Leader is elected for set of peers for each organization independently.
 Elected leader is responsible to send the heartbeat messages to the rest of the peers as an evidence of liveness. If one or more peers won’t get heartbeats updates during period of time, they will initiate a new round of leader election procedure, eventually selecting a new leader. In case of a network partition in the worst case there will be more than one active leader for organization thus to guarantee resiliency and availability allowing the organization’s peers to continue making progress. After the network partition is healed one of the leaders will relinquish its leadership, therefore in steady state and in no presence of network partitions for each organization there will be only one active leader connecting to the ordering service.
 Following configuration controls frequency of the leader heartbeat messages:
@@ -634,6 +634,17 @@ The amount of ARY tokens is preliminary and has not been finalized yet
 
 ### Token Implementation 
 
+In order to establish a token to distribute the network a **Token Generation Event** is required. The token *must* have a value in order for it to be useful in safeguarding the network and for creating the incentives for individuals to participate in hosting the network.
+
+ARY, the Ethereum Token we have created is based on a standard that has been accpeted by the community through an EIP (Ethereum Improvement Proposal) called `ERC-20`
+
+> to read the full standards reference visit the [ethereum github](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md)
+
+Symbol: ARY
+Decimals: 18
+Address: 0xa5F8fC0921880Cb7342368BD128eb8050442B1a1
+
+
 
 #### Token Use Case: Maximizing Token Value
 
@@ -645,6 +656,8 @@ Service Token
 
 In a monetary base, valuation is obtained through the *equation of exchange* which is defined as `MV=PQ` where `V` is *velocity*.
 
+![](https://www.dropbox.com/s/ls37aojppwmtpcl/mv_pq.svg?dl=0)
+
 In designing a token model in which *value* increases with *network usage* we can claim that as *v* increases *Price,p* accelerates in the downward slope (i.e. negative price pressure)
 
 A Service Token is one in which a user "stakes" or "bonds" the token of the network in order to provide *services* to the network, such as file storage (Storj, Filecoin), computation power (Golem), or -etc-. 
@@ -653,9 +666,13 @@ So, as demand for the service grows and a fixed supply (*ceterus paribus*) the p
 
 > **Net Present Value**
 
-`NPV = sumation{ }`
+![](https://www.dropbox.com/s/xthkwwbb6rvm6j8/net_present.svg?dl=0)
 
-Calculating Terminal Value as `cash flow / discount rate` and assuming a discount rate of *40%* and an operating margin of 25% we can derive a potential value as:
+Calculating Terminal Value as
+[![](https://www.dropbox.com/s/ii8e3dgbpzul0wz/terminal_value.png?dl=0)]
+
+
+assuming a discount rate of *40%* and an operating margin of 25% we can derive a potential value as:
 
 { valuation formula }
 
