@@ -510,27 +510,30 @@ becomes clear that transaction size directly impacts the block interval, and the
 
 Differences between standard Hyperledger Fabric Deployment 
 
+Block Explorer
+  The Block Explorer we are using has been created from the ground up in-house. It focuses on serving *Fabric* blockchains as opposed to trying to serve many different blockchains, which is the case with the Hyperledger Explorer Project.
+
+
 Gossip Protocol
 Consensus Protocol 
 State Database
 Data Storage
-Account Identifiers 
-
-paragraph 
+Account Identifiers  
 
 
 
-### Snow White
+### Tendermint
 
 
 ### RBFT 
+
 As described in their paper, existing BFT protocols use a special replica, called the "primary", which indicates to other replicas the order in which requests should be processed. This primary can be smartly malicious and degrade the performance of the system without being detected by correct replicas. Our evaluation shows that RBFT achieves similar performance as the most robust protocols when there is no failure and that, under faults, its maximum performance degradation is about 3%, whereas it is, at least, equal to 78% for existing protocols."
 
 RBFT implements a new approach whereby multiple instances of the protocol run simultaneously, a Master instance, and one or more Backup instances. All the instances order the requests, but only the requests ordered by the Master instance are actually executed. All nodes monitor the Master and compare its performance with that of the Backup instances. If the Master does not perform acceptably, it is considered malicious and replaced.
 
 
 
-### Gossip Protocol: 
+### Gossip Protocol
 
 RAET: Reliable Asynchronous Event Transport Protocol, a high-performance, fault-tolerant communications protocol on top of UDP. RAET leverages Curve25519, a highly-secure high-performance elliptic curve.
 
@@ -566,6 +569,8 @@ We propose the implementation of a Globally Unique Identifier (GUID) for use in 
 
 
 ### Endorsement Policies
+
+Signatures (Ring Signature Implementation)
 
 ### Masternodes
 paragraph 
@@ -688,9 +693,13 @@ So, as demand for the service grows and a fixed supply (*ceterus paribus*) the p
 > *Note* while this model holds true for pure service commodities, an argument can be made that it is applicable in drawing a close approximation in our use case as *service providers* provide the service of network security and uptime (i.e. they host part of the network)
 
 
-#### Establishing an Econometric Model
+#### Token License for Network & Application Access
 
-%% GRAPH %%
+In order for businesses to become a network participant they must buy a certain amount of ARY Tokens. This baseline creates a minimum amount of network resources they are entitled to per day. If they require more resources they must purchase more tokens. Tokens are NOT used per transaction, but rather held and staked, whereby the system chaincode enables them to conduct the amount of transactions they are entitled to per their token holdings.
+
+Access to specific applications will also require additional tokens. 
+
+3rd Party Application developers may also offer their applications for sale on the network, whereby a revenue royalty agreement is agreed upon. 
 
 #### Keeping the ERC-20 Token 
 
@@ -742,9 +751,43 @@ The following digram illustrates how the ARY Blockchain distributes rewards by u
 ![](https://www.dropbox.com/s/m92bfzsfew7i8ei/Screenshot%202018-04-23%2013.41.30.png?raw=1)
 
 
+### Developing on the ARY Blockchain
 
+Our API/SDKs will be available in at least 10 different programming languages, which are:
 
+PHP, .NET, Ruby, Python, Node, Golang, iOS, Android, HTTP, Java, & Angular.
 
+We will also establish a 3rd party developers fund close to our first test-net release. 3rd Party Developers can receive:
+
+Tokens for use 
+Recurring Royalty Revenue
+Development Support
+  Technical
+  Finanical 
+  Services (e.g. Servers, Equipment, etc)
+Commericalization Support
+Equity in Block Array Corporation
+Ability to pursue Patents
+Access to our Patent Portfolio for use in applications
+
+This goes beyond having a great developer ecosystem with substantial programming langauge support and through documentation. 
+
+**Software Licenses**
+Applications created by 3rd Party Developers must follow our license scheme, and any open source software must follow our criteria for licenses. Supported F/OSS licenses include:
+
+Apache Foundation 2.0
+BSD 2.0
+BSD + Patents
+MIT License
+
+> GPL Licenses require a review process as GNU/GPL imposes certain requirements on downstream applications that utilize GNU/GPL licensed software. *This does not mean that you can not license it under GNU/GPL, rather that it requires us to make sure what parts are and are not licensed under it*.
+
+For more information please visit [**Open Source Initiative**](https://opensource.org/licenses/category)
+
+**Documentation and non-software licenses**
+Documentation is licensed under the Creative Commons 4.0 International Share-Alike
+
+For more information please visit [**Creative Commons**](https://creativecommons.org)
 Requirements
 
   1. Unique Implementations
@@ -783,6 +826,11 @@ https://bitshares.org/technology/industrial-performance-and-scalability/
 
 RBFT: Redundant Byzantine Fault Tolerance
 https://pakupaku.me/plaublin/rbft/5000a297.pdf
+
+Software Licenses | Open Source Initiative 
+https://opensource.org/licenses/category 
+
+
 
 ___
 
