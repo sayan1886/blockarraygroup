@@ -363,34 +363,35 @@ Inefficiency - BoL are issued as three original physical documents. One document
 **Amendments** - Making amendments to a BoL can be complicated. All three BoLs have to be sent to the Carrier who destroys them, then issues a new set of BoLs with the intended amendments. 
 
 
-%% INSERT BILL OF LADING GS1 SAMPLE IMAGE %% 
-
-## Visual SmartContracts - Document Mgmt
-
-The modern logistics pipeline has many moving pieces with paperwork for each leg of the journey. 
-
-+ Signatures
-+ Imaging
-+ Invoice
-+ Indexing
-+ Proposals
-+ Certificates
-+ Manifests 
-
-For "legacy" paper documents, we can digitze and deliver them to all parties
-
-easily collect data, populate a document and send it to any contact automatically
-
-Permissions
-Policy
-Events 
-
-#### Connected Documents 
-
-Scanning of the document 
+![alt text](https://s3.amazonaws.com/blockarray-hosting/static/whitepaper_imgs/gs1_bol.png "Bill of Lading, GS1")
 
 
-User Permission -> User Action -> User Event 
+Many attempts have been made at modernizing shipping documents, and the shipping industry as a whole. Yet there are vestiages of poorly implemented solutions such as EDI (Electronic Data Interchange) and the widespread use of XML that still plague the industry. Electronic document management is not a new solution, especially in the logistics/shipping industry. Yet the issue that has prevented bills of lading and other shipping documents from *truely* taking hold is uniqueness. Since a title is suppose to be unique, a physical, paper bill of lading have always been required as digital documents had, until now, been unable to retain that crucial property of being unique. Having a blockchain-based bill of lading can solve this issue, and all the issues we have listed in the previous section.
+
+> Digital Scarcity is the property required for a digital bill of lading being able to truely suceeed in the logistics/shipping industry
+
+Our solution, **Visual SmartContracts** is an application that allows users to create a smart contract based document like a bill of lading. 
+
+#### Visual SmartContracts 
+
+Visual SmartContracts implements the following
+
+!> **Warning** Some features may not be implemented depending on user feedback/product market fit
+
++ WYSIWYG Form/Text Editor
++ Define user policies to implement EPCIS events
++ Import existing documents 
++ Create new documents
++ API to automate field imports
++ API to notify/trigger users/events
++ Document Signing using PKI/Legacy Signatures
++ Advanced Meta-data collection
++ 100% Privacy
++ 100% Standards compliant (GS1, SSAC, etc)
++ Unique Physical Document Authentication and Tracking
++ Foreign Language Localization Support (UTF-8, RTL, etc)
+
+Once a Bill of Lading is transfered from one user to another, the original user will not be able to modify the bill of lading, and will only retain a generated copy after the transfer for their records.
 
 ### Enterprise Smart Contracts
 Inorder to design and implement enterprise-quality smart contracts, we need to define exactly what an enterprise smart contract is. We shall decompose this concept into its major components below:
@@ -405,7 +406,7 @@ Inorder to design and implement enterprise-quality smart contracts, we need to d
 
 + Ledger – the immutable instance on a distributed ledger (blockchain) based on the schema that is used to record all contract activities and proofs required. This is can be either the public version of a “distributed trustless truth database” or a “shared, permissioned, semi-trusted, discretionarily private, truth database”. 
 
-+Contract Binding - A Enterprise Smart Contract Binding is the composition of these parts creating a unique instance of an Enterprise Smart Contract. It is created when a contract begins negotiation between counterparties and becomes versioned and locked when each counterparty signs the contract. Once signed and locked the Enterprise Smart Contract begins the execution of the terms and conditions that lead to fulfillment.
++ Contract Binding - A Enterprise Smart Contract Binding is the composition of these parts creating a unique instance of an Enterprise Smart Contract. It is created when a contract begins negotiation between counterparties and becomes versioned and locked when each counterparty signs the contract. Once signed and locked the Enterprise Smart Contract begins the execution of the terms and conditions that lead to fulfillment.
 
 In order to develop Enterprise quality smart contracts standards need to be put in place. 
 + Universal Business Langauge 
@@ -509,27 +510,30 @@ becomes clear that transaction size directly impacts the block interval, and the
 
 Differences between standard Hyperledger Fabric Deployment 
 
+Block Explorer
+  The Block Explorer we are using has been created from the ground up in-house. It focuses on serving *Fabric* blockchains as opposed to trying to serve many different blockchains, which is the case with the Hyperledger Explorer Project.
+
+
 Gossip Protocol
 Consensus Protocol 
 State Database
 Data Storage
-Account Identifiers 
-
-paragraph 
+Account Identifiers  
 
 
 
-### Snow White
+### Tendermint
 
 
 ### RBFT 
+
 As described in their paper, existing BFT protocols use a special replica, called the "primary", which indicates to other replicas the order in which requests should be processed. This primary can be smartly malicious and degrade the performance of the system without being detected by correct replicas. Our evaluation shows that RBFT achieves similar performance as the most robust protocols when there is no failure and that, under faults, its maximum performance degradation is about 3%, whereas it is, at least, equal to 78% for existing protocols."
 
 RBFT implements a new approach whereby multiple instances of the protocol run simultaneously, a Master instance, and one or more Backup instances. All the instances order the requests, but only the requests ordered by the Master instance are actually executed. All nodes monitor the Master and compare its performance with that of the Backup instances. If the Master does not perform acceptably, it is considered malicious and replaced.
 
 
 
-### Gossip Protocol: 
+### Gossip Protocol
 
 RAET: Reliable Asynchronous Event Transport Protocol, a high-performance, fault-tolerant communications protocol on top of UDP. RAET leverages Curve25519, a highly-secure high-performance elliptic curve.
 
@@ -565,6 +569,8 @@ We propose the implementation of a Globally Unique Identifier (GUID) for use in 
 
 
 ### Endorsement Policies
+
+Signatures (Ring Signature Implementation)
 
 ### Masternodes
 paragraph 
@@ -644,7 +650,19 @@ Symbol: ARY
 Decimals: 18
 Address: 0xa5F8fC0921880Cb7342368BD128eb8050442B1a1
 
+**Difference between an ICO and a TGE**
+An ICO, *initial coin offering*, has some charateristics different than what we consider a TGE, *token generation event*, such as:
 
++ Supply of coins/tokens is determined no matter if contribution amount hits hardcap
++ Coin/Token is used for proprietary payment 
++ Coin/Token is eventually replaced with a native on-chain asset 
++ Coin/Token is itself the "application"
+
+The ARY Token is different in that:
++ Token supply is generated only when *contributions* are sent to the smart contract 
++ Token is *not* used for payment of services, rather is used as a *license* 
++ Token is *not* replaced with a native on-chain asset
++ Token is *not* itself the application, rather enables access to multiple applications
 
 #### Token Use Case: Maximizing Token Value
 
@@ -666,15 +684,7 @@ So, as demand for the service grows and a fixed supply (*ceterus paribus*) the p
 
 > **Net Present Value**
 
-![](https://www.dropbox.com/s/xthkwwbb6rvm6j8/net_present.svg?dl=0)
-
-Calculating Terminal Value as
-[![](https://www.dropbox.com/s/ii8e3dgbpzul0wz/terminal_value.png?dl=0)]
-
-
-assuming a discount rate of *40%* and an operating margin of 25% we can derive a potential value as:
-
-{ valuation formula }
+![alt text](https://s3.amazonaws.com/blockarray-hosting/static/whitepaper_imgs/net_present.svg "Net Present Value Formula")
 
 **Currency Tokens** trend towards a **fractional value of transaction volume**
 
@@ -683,29 +693,32 @@ assuming a discount rate of *40%* and an operating margin of 25% we can derive a
 > *Note* while this model holds true for pure service commodities, an argument can be made that it is applicable in drawing a close approximation in our use case as *service providers* provide the service of network security and uptime (i.e. they host part of the network)
 
 
-#### Establishing an Econometric Model
+#### Token License for Network & Application Access
 
-%% GRAPH %%
+In order for businesses to become a network participant they must buy a certain amount of ARY Tokens. This baseline creates a minimum amount of network resources they are entitled to per day. If they require more resources they must purchase more tokens. Tokens are NOT used per transaction, but rather held and staked, whereby the system chaincode enables them to conduct the amount of transactions they are entitled to per their token holdings.
+
+Access to specific applications will also require additional tokens. 
+
+3rd Party Application developers may also offer their applications for sale on the network, whereby a revenue royalty agreement is agreed upon. 
 
 #### Keeping the ERC-20 Token 
 
 **The ERC-20 Token is the asset used**, in other words *there is no "conversion" to another digital asset needed* under our system
 
-` R = [X / square root(Z)] `
-` R = Resources (transactions, queries, etc) available per 24h period `
-` X = Tokens Staked by User `
-` Z = Resource Modifier defined by Price Function of ARY Token `
+![](https://s3.amazonaws.com/blockarray-hosting/static/whitepaper_imgs/resource_eq.png)
 
-
-*Figure 1*
-| Resources | # of ARY Tokens |
-| --------- | --------------- |
-| 500       | 5,000           |
-| 100.      | 1,000           |
-| 50.       | 500.            |
+` R = [X / square root(Z)] `<br>
+` R = Resources (transactions, queries, etc) available per 24h period `<br>
+` X = Tokens Staked by User `<br>
+` Z = Resource Modifier defined by Price Function of ARY Token `<br>
 
 
 > The variable 'Z' Price Function will be finalized upon the completion of market research and communtiy input, and is not a perment constant 
+
+
+<center>*Example*</center>
+
+![alt text](https://s3.amazonaws.com/blockarray-hosting/static/whitepaper_imgs/network_resources_table.png "Preliminary Staking")
 
 #### Calculating Node Reputation 
 
@@ -738,9 +751,43 @@ The following digram illustrates how the ARY Blockchain distributes rewards by u
 ![](https://www.dropbox.com/s/m92bfzsfew7i8ei/Screenshot%202018-04-23%2013.41.30.png?raw=1)
 
 
+### Developing on the ARY Blockchain
 
+Our API/SDKs will be available in at least 10 different programming languages, which are:
 
+PHP, .NET, Ruby, Python, Node, Golang, iOS, Android, HTTP, Java, & Angular.
 
+We will also establish a 3rd party developers fund close to our first test-net release. 3rd Party Developers can receive:
+
+Tokens for use 
+Recurring Royalty Revenue
+Development Support
+  Technical
+  Finanical 
+  Services (e.g. Servers, Equipment, etc)
+Commericalization Support
+Equity in Block Array Corporation
+Ability to pursue Patents
+Access to our Patent Portfolio for use in applications
+
+This goes beyond having a great developer ecosystem with substantial programming langauge support and through documentation. 
+
+**Software Licenses**
+Applications created by 3rd Party Developers must follow our license scheme, and any open source software must follow our criteria for licenses. Supported F/OSS licenses include:
+
+Apache Foundation 2.0
+BSD 2.0
+BSD + Patents
+MIT License
+
+> GPL Licenses require a review process as GNU/GPL imposes certain requirements on downstream applications that utilize GNU/GPL licensed software. *This does not mean that you can not license it under GNU/GPL, rather that it requires us to make sure what parts are and are not licensed under it*.
+
+For more information please visit [**Open Source Initiative**](https://opensource.org/licenses/category)
+
+**Documentation and non-software licenses**
+Documentation is licensed under the Creative Commons 4.0 International Share-Alike
+
+For more information please visit [**Creative Commons**](https://creativecommons.org)
 Requirements
 
   1. Unique Implementations
@@ -779,6 +826,11 @@ https://bitshares.org/technology/industrial-performance-and-scalability/
 
 RBFT: Redundant Byzantine Fault Tolerance
 https://pakupaku.me/plaublin/rbft/5000a297.pdf
+
+Software Licenses | Open Source Initiative 
+https://opensource.org/licenses/category 
+
+
 
 ___
 
