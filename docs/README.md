@@ -664,7 +664,7 @@ The ARY Token is different in that:
 + Token is *not* replaced with a native on-chain asset
 + Token is *not* itself the application, rather enables access to multiple applications
 
-#### Token Use Case: Maximizing Token Value
+#### Maximizing Token Value
 
 There are three (3) main token economic models:
 
@@ -693,13 +693,36 @@ So, as demand for the service grows and a fixed supply (*ceterus paribus*) the p
 > *Note* while this model holds true for pure service commodities, an argument can be made that it is applicable in drawing a close approximation in our use case as *service providers* provide the service of network security and uptime (i.e. they host part of the network)
 
 
-#### Token License for Network & Application Access
+#### Toke Use Case
 
+Token License for Network & Application Access
 In order for businesses to become a network participant they must buy a certain amount of ARY Tokens. This baseline creates a minimum amount of network resources they are entitled to per day. If they require more resources they must purchase more tokens. Tokens are NOT used per transaction, but rather held and staked, whereby the system chaincode enables them to conduct the amount of transactions they are entitled to per their token holdings.
 
 Access to specific applications will also require additional tokens. 
 
 3rd Party Application developers may also offer their applications for sale on the network, whereby a revenue royalty agreement is agreed upon. 
+
+
+Whereby resources per day provides a variable in a function that is reponsible for determining the *expenditure* rate or "burn" rate.
+
+> Example
+> 
+
+Business "A" wants to join the blockchain network and wants to have 10 employees on the network. B
+Step 1: Business "A" must buy 10,000 ARY Tokens
+   5,000 ARY is used to register the Business Entity
+   500 ARY is used per employee to create accounts
+ Step 2: Business "A" goes to the Registry DApp and selects what kind & how many licenses it wants (1 ORG licenses and 10 personal ONEL licenses)
+Step 3: Business "A" sends 10,000 ARY Tokens to the Registry DApp
+
+Step 4: Registry DApp creates three (3) smart contract licenses. One for the ORG and 1 for its PERSONAL list. The third smart contracft contains a  (m-n) in which the tokens are held. -replace: tokens sent to the token pool contract which contain all the tokens. 
+
+`70% are "Staked"
+ 20% are sent to the MerklePool (to be used to pay for masternodes)
+ 10% are "expended" per *actual* transactions conducted on ARY Network while their reputation is being formed (expenditure ends when reputation reaches threshold`
+
+Step 5: 
+Step 6. Registry DApp sends off information to the ARY Membership Service Provider 
 
 #### Keeping the ERC-20 Token 
 
@@ -810,6 +833,29 @@ checksum_type transaction_merkle_root;
 extensions_type extensions;
 static uint32_t num_from_id(const block_id_type& id);
 };`
+
+
+# Summary
+
+## Use Cases & Solutions
+
+**Detention Payouts**
+
+**Compliance** 
+Truck Drivers are required to undergo both a Drug & Alcohol certification and a Medical Certification 
+
+**Bill of Lading, Shipping Documents, etc**
+
+**Decentralized Loadboard**
+Brokers will no longer be able to rely soley on booking loads, as our decentralized loadboard will be able to complete that task. 
+
+**Maximizing Used Shipping Capacity**
+
+**Physical Goods and Document Authentication**
+
+
+**Consumer Engagement**
+
 
 ----------
 
