@@ -6,22 +6,31 @@
 
 !> **Warning** This is in progress, and may have breaking issues
 
-:warning: Many features are to be added, with graphics being the last. Spelling errors are to be expected
+:warning: Spelling errors are soon to be fixed, along with new graphics. we are nearing completion and aim for release canidate to be version 2.5
 
 ---
 
-**version 2.1.9**
+**version 2.2.0**
 
 Author: Sam Bacha *Founder*
 
-ToDo:
-Replace maths with LaTeX formating
-Insert graphics 
-Refine formating 
-Check Spelling and Grammer
+To Do List (as of 5/6/18)
+Add Disclosures and Legal Section
+Add EPCIS transaction table
+Add Network Topology Map
+Redo Maximizing token Value section
+Import Intro and SCM sections from v1 whitepaper
+Check Spelling mistakes
+Check Grammar 
+
+Re-do all graphics and have graphics on AWS dedicated folder
+Re-do all tables in airtable 
+
 have editorial process completed
 Flesh out industry scope (pharma, defense)
 Insert in-line citations and import references 
+
+Reformat Inline Table of Contents to reflect new sections
 
 ## Introduction
 
@@ -812,8 +821,7 @@ Requirements
 `struct block_header
 {
 digest_type digest()const;
-block_id_type previous;
-uint32_t block_num()const { return num_from_id(previous) +
+obuint32_t block_num()const { return num_from_id(previous) +
 ˓→1; }
 fc::time_point_sec timestamp;
 witness_id_type witness;
