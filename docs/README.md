@@ -245,30 +245,13 @@ Barcodes -
 
 Driver records are a great use case.
 
-[airtable-embed](https://airtable.com/embed/shrCzCmWXhYaIs4oX?backgroundColor=blue&layout=card&viewControls=on ':include :type=iframe width=100% height=533x')
-
-| Identifying Information for Supporting Documents                                                                                                                                                                                          |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Driver name or carrier-assigned identification number, either on the document or on another document enabling the carrier to link the document to the driver. The vehicle unit number can also be used if it can be linked to the driver; |
-| Date                                                                                                                                                                                                                                      |
-| Location (including name of nearest city, town, or village)                                                                                                                                                                               |
-| Time                                                                                                                                                                                                                                      |
+[airtable-embed](https://airtable.com/embed/shrCzCmWXhYaIs4oX?backgroundColor=blue&layout=card&viewControls=on ':include :type=iframe width=100% height=533x')                                                                              
 
 *These must be listed on the supporting documents in order to be eligible for use.*
 
 ### Supporting Documents 
 
 [airtable-embed](https://airtable.com/embed/shrmxXAV1idTUZ1xE?backgroundColor=blue&layout=card&viewControls=on ':include :type=iframe width=100% height=533x')
-
-
-Documents that must be retained by law                                                              |
-| -------------------------------------------------------------------------------------------------------------------------- |
-| Bills of lading, itineraries, schedules, or equivalent documents that show the starting and ending location for each trip; |
-| Dispatch records, trip records, or equivalent documents;                                                                   |
-| Expense receipts related to “on-duty/not driving” periods (meals, lodging, fuel, etc.);                                    |
-| Fleet management system communication records;                                                                             |
-| Payroll records, settlement sheets, or equivalent documents showing payment to a driver.                                   |
-
 
 What happens if a log was anchored incorrectly? 
 The ELD regulation provides for this, as both the original and edited versions must be retained. Any edits to the log, either by the motor carrier or driver must be annotated as to the reason for the edit. On the Driver Passport page, both records are accessible. 
@@ -318,6 +301,11 @@ A company implementing EPCIS can use the authenticated identity of a trading par
 | Shipment Tracking                                   |
 | Electronic Article Surveillance (EAS)               |
 | Promotion Tracking                                  |
+
+
+### A New Transaction Type
+
+Ordinary transactions on a blockchain typically are just a movement of an asset from one account to another. With Ethereum, there has been additional transaction types, *additional data* in which a user may interact with a smart contract. In order to adapt a blockchain for supply chain needs a transaction must be able to provide **EPCIS event information**. 
 
 ## Object Naming Service 
 
@@ -423,7 +411,7 @@ As discussed in the previous section, there are two basic types of smart contrac
 
 
 
-## ChainProof - 
+## ChainProof 
 
 For example, if a screwdriver manufacturer creates a new screwdriver, they could tokenize the screwdriver and record it using the digital signature of the manufacturer establishing provenance. 
 Then, once sold and shipped to a distributor, a transaction transfers ownership of the tokenized screwdriver to the distributor (public key). This transfer of ownership is confirmed by signing the transaction with the same digital signature of the manufacturer. 
@@ -839,12 +827,17 @@ static uint32_t num_from_id(const block_id_type& id);
 
 ## Use Cases & Solutions
 
-**Detention Payouts**
+
+
 
 **Compliance** 
 Truck Drivers are required to undergo both a Drug & Alcohol certification and a Medical Certification 
 
 **Bill of Lading, Shipping Documents, etc**
+
+**EPCIS Style Transaction Types**
+
+**Detention Proofs & Payouts**
 
 **Decentralized Loadboard**
 Brokers will no longer be able to rely soley on booking loads, as our decentralized loadboard will be able to complete that task. 
