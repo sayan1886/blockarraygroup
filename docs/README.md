@@ -6,7 +6,7 @@
 
 !> **Warning** This is in progress, and may have breaking issues
 
-:warning: Spelling errors are soon to be fixed, along with new graphics. we are nearing completion and aim for release canidate to be version 2.5
+:warning: Spelling errors are soon to be fixed, along with new graphics. we are nearing completion and aim for release candidate to be version 2.5
 
 ---
 
@@ -127,13 +127,13 @@ This document is broken up into  # main sections.
 4. Implementation of our Ecosystem
 5. Corporate Overview
 
-# Logistics & Supply Chain Managment
+# Logistics & Supply Chain Management
 
-We can divde the logistics industry into three (3) segments: Land, Air and Sea.
+We can divide the logistics industry into three (3) segments: Land, Air and Sea.
 
 Of these market segments, land (overland freight) compromises the largest share, with Trucking being the largest segment of overland freight.
 
-> Supply Chain Managment main goal is: **Demand Forecasting**
+> Supply Chain Management main goal is: **Demand Forecasting**
 
 
 
@@ -157,11 +157,11 @@ According to the U.S. Department of Transportation, as of June 2017, the number 
 
 #### Advances in Trucking Operations
 
-While many have touted the arrival of autnomous driving vehicles, drones, and even electric tractors, most advances in trucking have been in *how* the distribution of goods happens in the supply chain. Cross Docking operations have given certain companies a competitive advantage when it comes to their operations, so much so that they have been able to drive sucess from it.
+While many have touted the arrival of autonomous driving vehicles, drones, and even electric tractors, most advances in trucking have been in *how* the distribution of goods happens in the supply chain. Cross Docking operations have given certain companies a competitive advantage when it comes to their operations, so much so that they have been able to drive success from it.
 
 *Distributor Cross Docking*: This is where a distributor consolidates inbound products from various vendors into a mulit-SKU pallet, which is delivered as soon as the last product is received. Computer distributors often source components and consolidate them into one shipment in merge-in-transit centers before delivering them to the customer, and rarely have the same vendor for all the products. Think of a Desktop tower, a monitor, a keyboard, and mouse that are combined into one package at a cross-dock for delivery to the customer as a single package. 
 
-*Retail cross-docking*: This involves the consolidation of shipments from different shippers and vendors to be sorted onto outbound trucks for different stores. WalMart pioneered this system in the 1980s to gain a competitive advantage against competitors such as Sears or Kmart.
+*Retail cross-docking*: This involves the consolidation of shipments from different shippers and vendors to be sorted onto outbound trucks for different stores. Walmart pioneered this system in the 1980s to gain a competitive advantage against competitors such as Sears or Kmart.
 
 
 #### Electronic Logging Device Mandate
@@ -176,7 +176,7 @@ What is the impact of this new law?
 
 !> Under Federal regulations, the motor carrier is responsible for training and monitoring its drivers to ensure compliance with Hours of Service rules.  Any driver violation may also be held against the carrier. Failing to establish an effective Hours of Service monitoring and compliance system can result in fines of thousands of dollars.  In extreme cases, motor carrier officials have even received jail sentences.
 
-So any violation in failing to comply with this new law could mean 
+So, any violation in failing to comply with this new law could mean 
 
 
 Four Driver Status Modes
@@ -244,7 +244,7 @@ Strong case for Data Ownership
 Trust-less Record Keeping
 Removal of “middlemen” 
 
-Therefore our product listings are:
+Therefore, our product listings are:
 Passports for Drivers, Vehicles and Assets
 Documents & Records: Bills of Lading, Industry Specific Documents, Legally Mandated Records
 Barcodes -  
@@ -355,7 +355,7 @@ Theft - BoL is a bearer document of title. This bears a particular risk that any
 **Fraud** - Manipulation/alteration of BoL to hide accountability due to shipment damage or other issues.
 Inefficiency - BoL are issued as three original physical documents. One document is managed by the banks involved in trade finance. One document is couriered to the recipient of the goods. And one document is retained by the Carrier. 
 
-**Physicality** - Delay in distNribution of the BoLs. Due to the originals only existing in a physical form, this means that the Carrier has to courier one of the originals to the Consignee. This leads to a situation where the goods have arrived at a Discharge port but that the Consignee has not received their BoL. 
+**Physicality** - Delay in distribution of the BoLs. Due to the originals only existing in a physical form, this means that the Carrier has to courier one of the originals to the Consignee. This leads to a situation where the goods have arrived at a Discharge port but that the Consignee has not received their BoL. 
 
 **Amendments** - Making amendments to a BoL can be complicated. All three BoLs have to be sent to the Carrier who destroys them, then issues a new set of BoLs with the intended amendments. 
 
@@ -363,11 +363,11 @@ Inefficiency - BoL are issued as three original physical documents. One document
 ![alt text](https://s3.amazonaws.com/blockarray-hosting/static/whitepaper_imgs/gs1_bol.png "Bill of Lading, GS1")
 
 
-Many attempts have been made at modernizing shipping documents, and the shipping industry as a whole. Yet there are vestiages of poorly implemented solutions such as EDI (Electronic Data Interchange) and the widespread use of XML that still plague the industry. Electronic document management is not a new solution, especially in the logistics/shipping industry. Yet the issue that has prevented bills of lading and other shipping documents from *truely* taking hold is uniqueness. Since a title is suppose to be unique, a physical, paper bill of lading have always been required as digital documents had, until now, been unable to retain that crucial property of being unique. Having a blockchain-based bill of lading can solve this issue, and all the issues we have listed in the previous section.
+Many attempts have been made at modernizing shipping documents, and the shipping industry as a whole. Yet there are vestiges of poorly implemented solutions such as EDI (Electronic Data Interchange) and the widespread use of XML that still plague the industry. Electronic document management is not a new solution, especially in the logistics/shipping industry. Yet the issue that has prevented bills of lading and other shipping documents from *truly* taking hold is uniqueness. Since a title is supposed to be unique, a physical, paper bill of lading has always been required as digital documents had, until now, been unable to retain that crucial property of being unique. Having a blockchain-based bill of lading can solve this issue, and all the issues we have listed in the previous section.
 
-> Digital Scarcity is the property required for a digital bill of lading being able to truely suceeed in the logistics/shipping industry
+> Digital Scarcity is the property required for a digital bill of lading being able to truly succeed in the logistics/shipping industry
 
-Our solution, **Visual SmartContracts** is an application that allows users to create a smart contract based document like a bill of lading. 
+Our solution, **Visual SmartContracts** is an application that allows users to create a smart contract-based document like a bill of lading. 
 
 #### Visual SmartContracts 
 
@@ -384,14 +384,14 @@ Visual SmartContracts implements the following
 + Document Signing using PKI/Legacy Signatures
 + Advanced Meta-data collection
 + 100% Privacy
-+ 100% Standards compliant (GS1, SSAC, etc)
++ 100% Standards compliant (GS1, SSAC, etc.)
 + Unique Physical Document Authentication and Tracking
-+ Foreign Language Localization Support (UTF-8, RTL, etc)
++ Foreign Language Localization Support (UTF-8, RTL, etc.)
 
-Once a Bill of Lading is transfered from one user to another, the original user will not be able to modify the bill of lading, and will only retain a generated copy after the transfer for their records.
+Once a Bill of Lading is transferred from one user to another, the original user will not be able to modify the bill of lading and will only retain a generated copy after the transfer for their records.
 
 ### Enterprise Smart Contracts
-Inorder to design and implement enterprise-quality smart contracts, we need to define exactly what an enterprise smart contract is. We shall decompose this concept into its major components below:
+In order to design and implement enterprise-quality smart contracts, we need to define exactly what an enterprise smart contract is. We shall decompose this concept into its major components below:
 
 **Components**
 
@@ -405,13 +405,13 @@ Inorder to design and implement enterprise-quality smart contracts, we need to d
 
 + Contract Binding - A Enterprise Smart Contract Binding is the composition of these parts creating a unique instance of an Enterprise Smart Contract. It is created when a contract begins negotiation between counterparties and becomes versioned and locked when each counterparty signs the contract. Once signed and locked the Enterprise Smart Contract begins the execution of the terms and conditions that lead to fulfillment.
 
-In order to develop Enterprise quality smart contracts standards need to be put in place. 
-+ Universal Business Langauge 
+In order to develop Enterprise quality smart contracts standards, need to be put in place. 
++ Universal Business Language 
 + Industry Agreed-upon Standards and Verbiage 
 + Data Attestation for data being provided
 + Discrete Privacy Levels
 
-We can categorize  smart contracts into two distinct featuresets 
+We can categorize smart contracts into two distinct feature sets 
 > **Notification** and **Executing**
 
 #### Parametric Smart Contracts
@@ -440,11 +440,11 @@ For example, if every phone part were to be tokenized and assembled into a phone
 
 # Blockchain Specifications 
 
-Designing both a performant and scalable blockchain requires drawing on various disciplnes, from computer science to business administration. Creating a network that enhances the benefits of using a blockchain is typically focused on various criteria involving benchmarking. Performance has been shown not to be a barrier for adoption by businesses, but rather the lack of applications, adherance to industry standards, and consideration of business-wide impact of certain activies (i.e. accounting implications that arise from the use of cryptocurrencies). 
+Designing both a performant and scalable blockchain requires drawing on various disciplines, from computer science to business administration. Creating a network that enhances the benefits of using a blockchain is typically focused on various criteria involving benchmarking. Performance has been shown not to be a barrier for adoption by businesses, but rather the lack of applications, adherence to industry standards, and consideration of business-wide impact of certain actives (i.e. accounting implications that arise from the use of cryptocurrencies). 
 
 
 > “Differences in performance between chains are usually almost entirely due to differences in the protocols and the implementations, not the consensus algorithm”
-> Go Ethereum p.g. 8
+> Go Ethereum pg. 8
 
 
 ## Requirements 
@@ -457,10 +457,10 @@ Our requirements list:
 - Easy Key Management 
 - Ability for 100% Privacy
 - Ability for determinism in state (no hard-forking)
-- Ability to withstand off-chain attack vectors, e.g:
+- Ability to withstand off-chain attack vectors, e.g.:
   - Bribery
   - Cartel Forming
-- Ability to withstand on-chain attack vectors, e.g:
+- Ability to withstand on-chain attack vectors, e.g.:
   - 51% Attack
   - Refusal to Participate
   - Sybil Attack
@@ -480,7 +480,7 @@ Our requirements list:
 
 - Assets - Asset definitions enable the exchange of almost anything with monetary value over the network, from whole foods to antique cars to currency futures.
 - Chaincode - Chaincode execution is partitioned from transaction ordering, limiting the required levels of trust and verification across node types, and optimizing network scalability and performance.
-- Ledger Features - The immutable, shared ledger encodes the entire transaction history for each channel, and includes SQL-like query capability for efficient auditing and dispute resolution.
+- Ledger Features - The immutable, shared ledger encodes the entire transaction history for each channel and includes SQL-like query capability for efficient auditing and dispute resolution.
 - Privacy through Channels - Channels enable multi-lateral transactions with the high degrees of privacy and confidentiality required by competing businesses and regulated industries that exchange assets on a common network.
 - Security & Membership Services - Permissioned membership provides a trusted blockchain network, where participants know that all transactions can be detected and traced by authorized regulators and auditors.
 - Consensus -a Byzantine Fault Tolerant (BFT) consensus protocol, PBFT or RBFT.
@@ -488,7 +488,7 @@ Our requirements list:
 
 ## Design Considerations: Creating a High-Performance Blockchain
 
-Conducting a industry-wide search of the literature on creating a performant blockchain network has yeiled several specifications on acheiving a **high performing**, **scalable**, **secure**, and **robust** blockchain network.
+Conducting an industry-wide search of the literature on creating a performant blockchain network has yielded several specifications on achieving a **high performing**, **scalable**, **secure**, and **robust** blockchain network.
 
 
 Integrate oft-used Applications 
@@ -553,9 +553,9 @@ you can also perform complex rich queries against the chaincode data values, usi
 
 `1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa` - A Bitcoin Address
 
-	Traditional blockchain designs use cryptographic hashes to generate globally unique IDs that are statistically guaranteed to never have a collision. 
+  Traditional blockchain designs use cryptographic hashes to generate globally unique IDs that are statistically guaranteed to never have a collision. 
 The problem with these hashes is that they require significantly more memory and more CPU cycles to manipulate. It takes significantly more CPU time to look up an account record by hash than with a direct array index. 
-For example, 64 bit integers are easier to compare and manipulate than 160+bit IDs. Larger hash IDs means there is less room in the CPU cache and that more memory is required. On modern operating systems, infrequently accessed RAM is compressed, but hash identifiers are random data that is not compressible.
+For example, 64-bit integers are easier to compare and manipulate than 160+bit IDs. Larger hash IDs means there is less room in the CPU cache and that more memory is required. On modern operating systems, infrequently accessed RAM is compressed, but hash identifiers are random data that is not compressible.
 
 We propose the implementation of a Globally Unique Identifier (GUID) for use in account identification. Various implementations have been studied such as **IBAN** or International Bank Account Number.  Requirements for such an address scheme must:
 
@@ -596,7 +596,7 @@ These are to ensure the public layer channel redundancy.
 > Think of Primary as “Miners” and Secondary as “Full Nodes” - they keep a record of the entire chain but do not commit blocks to the chain
 
 $$\sigma = \alpha * 1.37$$
-where $$\sigma$$ is the amount of Secondary and $$\alpha$$ is the amount of Primary nodes and $$1.37$$ is a fixed constant determined by us
+where $$\sigma$$ is the amount of Secondary and $$\alpha$$ is the number of Primary nodes and $$1.37$$ is a fixed constant determined by us
 
 #### Heartbeat 
 
@@ -616,9 +616,9 @@ Following configuration controls frequency of the leader heartbeat messages:
 ## ARY Token
   
 
-The Block Array Token, "ARY" is an Ethereum standard compliant "ERC-20" blockchain asset. The asset is our implementation of a software license that is used in a variety of ways for the end customer. The ARY token can be thought of as an access card, granting the end user the ability to interact with various applications and infrastructure. The ARY token enables the user rights of access depending on the amount of tokens they have in their possession. Along with access rights they are granted an allotment of network resources based on the amount of ARY held.
+The Block Array Token, "ARY" is an Ethereum standard compliant "ERC-20" blockchain asset. The asset is our implementation of a software license that is used in a variety of ways for the end customer. The ARY token can be thought of as an access card, granting the end user the ability to interact with various applications and infrastructure. The ARY token enables the user rights of access depending on the number of tokens they have in their possession. Along with access rights they are granted an allotment of network resources based on the amount of ARY held.
 *** insert equation here ***
-ARY is not a currency nor a virtual asset ment to be used for the payments of goods and services.
+ARY is not a currency nor a virtual asset meant to be used for the payments of goods and services.
 This design choice was made because of the following factors
 
 [ ] Ease of Use
@@ -639,18 +639,18 @@ The amount of ARY tokens is preliminary and has not been finalized yet
 
 In order to establish a token to distribute the network a **Token Generation Event** is required. The token *must* have a value in order for it to be useful in safeguarding the network and for creating the incentives for individuals to participate in hosting the network.
 
-ARY, the Ethereum Token we have created is based on a standard that has been accpeted by the community through an EIP (Ethereum Improvement Proposal) called `ERC-20`
+ARY, the Ethereum Token we have created is based on a standard that has been accepted by the community through an EIP (Ethereum Improvement Proposal) called `ERC-20`
 
-> to read the full standards reference visit the [ethereum github](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md)
+> to read the full standards reference visit the [Ethereum github](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md)
 
 Symbol: ARY
 Decimals: 18
 Address: 0xa5F8fC0921880Cb7342368BD128eb8050442B1a1
 
 **Difference between an ICO and a TGE**
-An ICO, *initial coin offering*, has some charateristics different than what we consider a TGE, *token generation event*, such as:
+An ICO, *initial coin offering*, has some characteristics different than what we consider a TGE, *token generation event*, such as:
 
-+ Supply of coins/tokens is determined no matter if contribution amount hits hardcap
++ Supply of coins/tokens is determined no matter if contribution amount hits hard cap
 + Coin/Token is used for proprietary payment 
 + Coin/Token is eventually replaced with a native on-chain asset 
 + Coin/Token is itself the "application"
@@ -700,7 +700,7 @@ Access to specific applications will also require additional tokens.
 3rd Party Application developers may also offer their applications for sale on the network, whereby a revenue royalty agreement is agreed upon. 
 
 
-Whereby resources per day provides a variable in a function that is reponsible for determining the *expenditure* rate or "burn" rate.
+Whereby resources per day provides a variable in a function that is responsible for determining the *expenditure* rate or "burn" rate.
 
 > Example
 > 
@@ -712,10 +712,10 @@ Step 1: Business "A" must buy 10,000 ARY Tokens
  Step 2: Business "A" goes to the Registry DApp and selects what kind & how many licenses it wants (1 ORG licenses and 10 personal ONEL licenses)
 Step 3: Business "A" sends 10,000 ARY Tokens to the Registry DApp
 
-Step 4: Registry DApp creates three (3) smart contract licenses. One for the ORG and 1 for its PERSONAL list. The third smart contracft contains a  (m-n) in which the tokens are held. -replace: tokens sent to the token pool contract which contain all the tokens. 
+Step 4: Registry DApp creates three (3) smart contract licenses. One for the ORG and 1 for its PERSONAL list. The third smart contract contains a  (m-n) in which the tokens are held. -replace: tokens sent to the token pool contract which contain all the tokens. 
 
 `70% are "Staked"
- 20% are sent to the MerklePool (to be used to pay for masternodes)
+ 20% are sent to the Merkle Pool (to be used to pay for masternodes)
  10% are "expended" per *actual* transactions conducted on ARY Network while their reputation is being formed (expenditure ends when reputation reaches threshold`
 
 Step 5: 
@@ -728,12 +728,12 @@ Step 6. Registry DApp sends off information to the ARY Membership Service Provid
 ![](https://s3.amazonaws.com/blockarray-hosting/static/whitepaper_imgs/resource_eq.png)
 
 ` R = [X / square root(Z)] `<br>
-` R = Resources (transactions, queries, etc) available per 24h period `<br>
+` R = Resources (transactions, queries, etc.) available per 24h period `<br>
 ` X = Tokens Staked by User `<br>
 ` Z = Resource Modifier defined by Price Function of ARY Token `<br>
 
 
-> The variable 'Z' Price Function will be finalized upon the completion of market research and communtiy input, and is not a perment constant 
+> The variable 'Z' Price Function will be finalized upon the completion of market research and community input, and is not a permeant constant 
 
 
 <center>*Example*</center>
@@ -742,9 +742,9 @@ Step 6. Registry DApp sends off information to the ARY Membership Service Provid
 
 #### Calculating Node Reputation 
 
-Developing a benchmark to calculate malicous nodes 
+Developing a benchmark to calculate malicious nodes 
 
-**Eigenvector Centraility**
+**Eigenvector Centrality**
 ` equation1 here `
 
 **Max-Flow Analysis**
@@ -763,7 +763,7 @@ By distributing the network among individuals who have our ARY token, they reduc
 
 token as network incentive 
 
-The following digram illustrates how the ARY Blockchain distributes rewards by using the Ethereum Blockchain (therby the ERC-20 token).
+The following diagram illustrates how the ARY Blockchain distributes rewards by using the Ethereum Blockchain (thereby the ERC-20 token).
 
 
 
@@ -783,14 +783,14 @@ Tokens for use
 Recurring Royalty Revenue
 Development Support
   Technical
-  Finanical 
-  Services (e.g. Servers, Equipment, etc)
-Commericalization Support
+  Financial 
+  Services (e.g. Servers, Equipment, etc.)
+Commercialization Support
 Equity in Block Array Corporation
 Ability to pursue Patents
 Access to our Patent Portfolio for use in applications
 
-This goes beyond having a great developer ecosystem with substantial programming langauge support and through documentation. 
+This goes beyond having a great developer ecosystem with substantial programming language support and through documentation. 
 
 **Software Licenses**
 Applications created by 3rd Party Developers must follow our license scheme, and any open source software must follow our criteria for licenses. Supported F/OSS licenses include:
@@ -800,7 +800,7 @@ BSD 2.0
 BSD + Patents
 MIT License
 
-> GPL Licenses require a review process as GNU/GPL imposes certain requirements on downstream applications that utilize GNU/GPL licensed software. *This does not mean that you can not license it under GNU/GPL, rather that it requires us to make sure what parts are and are not licensed under it*.
+> GPL Licenses require a review process as GNU/GPL imposes certain requirements on downstream applications that utilize GNU/GPL licensed software. *This does not mean that you cannot license it under GNU/GPL, rather that it requires us to make sure what parts are and are not licensed under it*.
 
 For more information please visit [**Open Source Initiative**](https://opensource.org/licenses/category)
 
@@ -847,8 +847,8 @@ Truck Drivers are required to undergo both a Drug & Alcohol certification and a 
 
 **Detention Proofs & Payouts**
 
-**Decentralized Loadboard**
-Brokers will no longer be able to rely soley on booking loads, as our decentralized loadboard will be able to complete that task. 
+**Decentralized Load board**
+Brokers will no longer be able to rely solely on booking loads, as our decentralized load board will be able to complete that task. 
 
 **Maximizing Used Shipping Capacity**
 
