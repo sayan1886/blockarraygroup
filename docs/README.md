@@ -777,20 +777,16 @@ Our API/SDKs will be available in at least 10 different programming languages, w
 
 PHP, .NET, Ruby, Python, Node, Golang, iOS, Android, HTTP, Java, & Angular.
 
-We will also establish a 3rd party developers fund close to our first test-net release. 3rd Party Developers can receive:
+Developers can already begin work utilizing SDKs available for Hyperledger Fabric:
 
-Tokens for use 
-Recurring Royalty Revenue
-Development Support
-  Technical
-  Financial 
-  Services (e.g. Servers, Equipment, etc.)
-Commercialization Support
-Equity in Block Array Corporation
-Ability to pursue Patents
-Access to our Patent Portfolio for use in applications
+*We Recommend using Node as it has better documentation*
+[Node.js](https://fabric-sdk-node.github.io/index.html)
+[Java](https://github.com/hyperledger/fabric-sdk-java)
 
-This goes beyond having a great developer ecosystem with substantial programming language support and through documentation. 
+Developers may establish a side chain through invoking system chaincode. In order to establish a side chain you will need to create a specific Certificate by staking ARY. 
+
+For more information please e-mail: admin@blockarray.com with the subject;
+"Side Chain Certificate Request"
 
 **Software Licenses**
 Applications created by 3rd Party Developers must follow our license scheme, and any open source software must follow our criteria for licenses. Supported F/OSS licenses include:
