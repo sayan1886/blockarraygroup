@@ -485,6 +485,28 @@ Our requirements list:
 - Security & Membership Services - Permissioned membership provides a trusted blockchain network, where participants know that all transactions can be detected and traced by authorized regulators and auditors.
 - Consensus -a Byzantine Fault Tolerant (BFT) consensus protocol, PBFT or RBFT.
 
+### Architecture
+
+#### Blocks
+
+|                    Block                   |
+|:------------------------------------------:|
+|       Header (hash of previous block)      |
+|        Block Number (vBlock Number)        |
+| Transactions (valid transactions commited) |
+
+More specifically, every block of a validated ledger contains:
+• The hash of the previous vBlock.
+• vBlock number.
+• An ordered list of all valid transactions committed by the peers since the last vBlock was computed (i.e., list of valid transactions in a corresponding block).
+• The hash of the corresponding block (in PeerLedger) from which the current vBlock is derived.
+All this information is concatenated and hashed by a peer, producing the hash of the vBlock in the validated ledger.
+
+#### Channels
+
+A **channel** is a private “subnet” of communication between two or more specific network members, for the purpose of conducting private and confidential transactions. A channel is defined by members (organizations), anchor peers per member, the shared ledger, chaincode application(s) and the ordering service node(s). Each transac- tion on the network is executed on a channel, where each party must be authenticated and authorized to transact on that channel. Each peer that joins a channel, has its own identity given by a membership services provider (MSP), which authenticates each peer to its channel peers and services.
+
+To create a new channel, the client SDK calls configuration system chaincode and references properties such as an- chor peers, and members (organizations). This request creates a genesis block for the channel ledger, which stores configuration information about the channel policies, members and anchor peers. When adding a new member to an existing channel, either this genesis block, or if applicable, a more recent reconfiguration block, is shared with the new member.
 
 ## Design Considerations: Creating a High-Performance Blockchain
 
@@ -690,7 +712,7 @@ So, as demand for the service grows and a fixed supply (*ceterus paribus*) the p
 > *Note* while this model holds true for pure service commodities, an argument can be made that it is applicable in drawing a close approximation in our use case as *service providers* provide the service of network security and uptime (i.e. they host part of the network)
 
 
-#### Toke Use Case
+#### Token Use Case
 
 Token License for Network & Application Access
 In order for businesses to become a network participant they must buy a certain amount of ARY Tokens. This baseline creates a minimum amount of network resources they are entitled to per day. If they require more resources they must purchase more tokens. Tokens are NOT used per transaction, but rather held and staked, whereby the system chaincode enables them to conduct the amount of transactions they are entitled to per their token holdings.
@@ -719,7 +741,8 @@ Step 4: Registry DApp creates three (3) smart contract licenses. One for the ORG
  10% are "expended" per *actual* transactions conducted on ARY Network while their reputation is being formed (expenditure ends when reputation reaches threshold`
 
 Step 5: 
-Step 6. Registry DApp sends off information to the ARY Membership Service Provider 
+Step 6. Registry DApp sends off information to the ARY Membership Service Provider. User is given an authentication code that enables them to claim their registration on the MSP.
+Step 7: User claims their Membership Certificate, and depending on their registration, can begin enrolling their employees, or being transacting on the network. 
 
 #### Keeping the ERC-20 Token 
 
@@ -760,12 +783,9 @@ By distributing the network among individuals who have our ARY token, they reduc
 ![Distribution of the Network among all Participants](https://www.dropbox.com/s/zbbacvd6r9w84bo/Screenshot%202018-04-23%2013.39.51.png?raw=1)
 
 
-
 token as network incentive 
 
 The following diagram illustrates how the ARY Blockchain distributes rewards by using the Ethereum Blockchain (thereby the ERC-20 token).
-
-
 
 
 ![](https://www.dropbox.com/s/m92bfzsfew7i8ei/Screenshot%202018-04-23%2013.41.30.png?raw=1)
@@ -829,6 +849,8 @@ static uint32_t num_from_id(const block_id_type& id);
 
 # Summary
 
+
+
 ## Use Cases & Solutions
 
 
@@ -843,7 +865,7 @@ Truck Drivers are required to undergo both a Drug & Alcohol certification and a 
 
 **Detention Proofs & Payouts**
 
-**Decentralized Load board**
+**Decentralized Load Board**
 Brokers will no longer be able to rely solely on booking loads, as our decentralized load board will be able to complete that task. 
 
 **Maximizing Used Shipping Capacity**
