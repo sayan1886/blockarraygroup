@@ -778,15 +778,24 @@ Step 1: Business "A" must buy 10,000 ARY Tokens
  Step 2: Business "A" goes to the Registry DApp and selects what kind & how many licenses it wants (1 ORG licenses and 10 personal ONEL licenses)
 Step 3: Business "A" sends 10,000 ARY Tokens to the Registry DApp
 
-Step 4: Registry DApp creates three (3) smart contract licenses. One for the ORG and 1 for its PERSONAL list. The third smart contract contains a  (m-n) in which the tokens are held. -replace: tokens sent to the token pool contract which contain all the tokens. 
+Step 4: Registry DApp creates three (3) smart contract licenses. One for the ORG and 1 for its PERSONAL list. The 3rd registry contract is the TokenWallet in which tokens are held for that specific business.
 
 `70% are "Staked"
  20% are sent to the Merkle Pool (to be used to pay for masternodes)
  10% are "expended" per *actual* transactions conducted on ARY Network while their reputation is being formed (expenditure ends when reputation reaches threshold`
 
-Step 5: 
-Step 6. Registry DApp sends off information to the ARY Membership Service Provider. User is given an authentication code that enables them to claim their registration on the MSP.
-Step 7: User claims their Membership Certificate, and depending on their registration, can begin enrolling their employees, or being transacting on the network. 
+Step 5. Registry DApp sends off information to the ARY Membership Service Provider. User is given an authentication code that enables them to claim their registration on the MSP.
+Step 6: User claims their Membership Certificate, and depending on their registration, can begin enrolling their employees, or being transacting on the network. 
+
+`Claw back rate, C: C = transactions x (1/4) `
+`Transaction lock rate, Tb = C * (1/2)`
+`Token License Decay Rate = C + Tb`
+
+In order to pay for services for master nodes, tokens used in the creation of the businesses main license are clawed back at a defined `Clawback Rate`, with the fractional modifier being chosen by us. 
+
+`Transaction lock rate` is determined by the `claw back rate`. These tokens are locked up in the TokenVault and are to be used to reduce Token Pricing fluctuations.
+
+`Token License Decay Rate` is the sum of both the `claw back` and `transaction lock`. This starts +31 days from inital registration of the license and lasts until the token amount for the licensed has been exhausted. Businesses must then re-register their license in order to maintain access. Prices for licenses are denominated in $USD.
 
 #### Keeping the ERC-20 Token 
 
