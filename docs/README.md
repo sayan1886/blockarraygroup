@@ -242,15 +242,16 @@ Our Ecosystem strives to cover these core competencies
 + Document Authentication and Management
 + Data Forecasting, Insights and Analytics
 
-FreightRelay: 
-ChainProof: API for Inter-Blockchain Connectivity
+**FreightRelay**
+Bills of Lading / Other Shipping Documents
+Detention Records
 Driver & Vehicle Passports
-SmartQR: Barcodes (1D/2D)
-
-Therefore, our product listings are:
-Passports for Drivers, Vehicles and Assets
-Documents & Records: Bills of Lading, Industry Specific Documents, Legally Mandated Records
-Barcodes -  
+Asset Visability/Track-and-Trace
+Loadboards
+Unused Shipping Capacity Marketplace
+Parametric Insurance Contracts
+Financial Transactions on legacy systems (ACH, Wire, Debit Cards, OTC)
+Invoice Factoring
 
 
 ## Passports - Driver, Vehicle and Asset
@@ -349,9 +350,6 @@ Ordinary transactions on a blockchain typically are just a movement of an asset 
 
 In order to use DNS to find information about an item, the item’s GS1 Identification Key must be converted into a format that DNS can understand, which is the typical, “dot” delimited, left-to-right form of all domain names. As the purpose of ONS is to discover data and services associated with a GS1 Identification Key and multiple sets of data and services may exist for that key, the appropriate DNS record type is the Naming Authority PoinTeR (NAPTR) [RFC 3403]. This record type contains several fields for denoting the protocol, services, and features that a given service endpoint exposes. It also allows the service endpoint to be expressed as a URI, thus allowing complex services to be encoded in a standard way. 
 
-The figure below describes a typical ONS query from start to finish from the viewpoint of an application. In this example, the starting point is a bar code or RFID tag. However, the source of the GS1 IdentificationKey is not restricted to data carriers; it could be part of a transaction document (e.g. a purchase order), an event record, a master data record, or any other source.
-
-%% insert img %%
 
 ## Shipping Documents
 
@@ -448,23 +446,9 @@ We can categorize smart contracts into two distinct feature sets
 As discussed in the previous section, there are two basic types of smart contracts: Notifying and Executing. These both fall into a category we call **Parametric** smart contracts.
 
 
-
-## ChainProof 
-
-For example, if a screwdriver manufacturer creates a new screwdriver, they could tokenize the screwdriver and record it using the digital signature of the manufacturer establishing provenance. 
-Then, once sold and shipped to a distributor, a transaction transfers ownership of the tokenized screwdriver to the distributor (public key). This transfer of ownership is confirmed by signing the transaction with the same digital signature of the manufacturer. 
-The distributor can repeat the same exercise using their keys when selling the asset in the future, documenting the lineage of that screwdriver as it navigates the supply chain.
-
-erc721
-Tokenization and signing with public/private key pairs in the blockchain world establishes provenance, documenting the moment a thing is recorded.
-Public key can be used to support buying, selling, trading, insuring and tracking of things across organizations thus creating a full audit trail of the tokenized object itself, or lineage.
-
-Tokens can and usually are bundled together in a collection. The collection can also be tokenized creating a composite token of all the tokens contained within. 
-For example, if every phone part were to be tokenized and assembled into a phone, the phone itself could be represented with a token made from its parts.
-
 ## Barcodes
 
-%% BARCODE IMG %% 
+![alt text](https://www.dropbox.com/s/moqcmccpr6p1h5w/anatomy_of_gs1_barcode.png?dl=0 "Anatomy of a Barcode")
 
 The first six to nine digits of a UPC are referred to as the “Company Prefix”, and they are
 assigned by a non-profit organization (GS1). This number uniquely identifies a company and
@@ -477,16 +461,30 @@ calculated using a mathematical calculation based on the first 11 digits of the 
 !> Since 2016 Amazon requires and in addition verifies the authenticity of product UPC’s by
 checking the GS1 database. 
 
-----------
+# Blockchain
 
+Designing both a performant and scalable blockchain requires drawing on various disciplines, from computer science to business administration. Creating a network that enhances the benefits of using a blockchain is typically focused on various criteria involving benchmarking. Performance has been shown not to be a barrier for adoption by businesses, but rather the lack of applications, adherence to industry standards, and consideration of business-wide impact of certain actives (e.g. accounting implications that arise from the use of cryptocurrencies). 
 
-
-<<<<<<< HEAD
-Designing both a performant and scalable blockchain requires drawing on various disciplines, from computer science to business administration. Creating a network that enhances the benefits of using a blockchain is typically focused on various criteria involving benchmarking. Performance has been shown not to be a barrier for adoption by businesses, but rather the lack of applications, adherence to industry standards, and consideration of business-wide impact of certain actives (i.e. accounting implications that arise from the use of cryptocurrencies). 
+With this in mind, we are not just building a *scalable* enterprise-ready blockchain network, but also a *usable* network aimed at day-to-day use.
 
 
 > “Differences in performance between chains are usually almost entirely due to differences in the protocols and the implementations, not the consensus algorithm”
 > Go Ethereum pg. 8
+
+<br>
+Utilizing Hyperledger Fabric as our foundational base we can design and develop a highly scalable and modular blockchain deployment for our solution set for the logistics/supply chain industry.
+
+**Network Name**: Freight Relay
+
+**Block Time**: 3 seconds (1200 blocks per hour)
+
+**Block Size**: Dynamic, min: 1,000 kB (1mB) max: 6,000 kB (6,000)
+Transactions: 
+**Certificate Authority**: x.509 Standards [RFC 5280](https://tools.ietf.org/html/rfc5280)
+**Account Identifiers**: Public Hash, Account Name
+**Data Storage**: ScyllaDB, IPFS Nodes, 
+**Key Management**: Vault, HSMs
+Encryption: See *Appendix A Section E*
 
 
 ## Requirements 
@@ -789,8 +787,6 @@ Step 6: User claims their Membership Certificate, and depending on their registr
 
 **Side Chains & 3rd Party Developers**
 
-
-
 !> The follow section is a preliminary design and may not be implemented fully
 `Claw back rate, C: C = transactions x (1/4) `
 `Transaction lock rate, Tb = C * (1/2)`
@@ -974,6 +970,34 @@ This document uses the following Markdown Specifications
 Finally, the site was generated using [**docsify**](https://docsify.js.org/#/)
 
 (C) 2018 **Block Array Corporation** | *All Rights Reserved*
+
+
+# Appendix 
+
+## A
+
+## B
+
+## C
+
+## D
+
+## E
+
++ Encryption and Cryptography Standards:
+
+For storing passwords:
+Argor2
+
+> For more information about Argor2, please see the [Password Hashing Competition](https://password-hashing.net/) event
+
+For providing *digests* of data:
+
+Depending on assesed security needs:
+BLAKE2
+> *For More information see NIST*
+> [Secure Hash Standard, SHS](https://csrc.nist.gov/publications/detail/fips/180/4/final)
+
 
 
 
