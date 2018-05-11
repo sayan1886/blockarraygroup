@@ -787,6 +787,11 @@ Step 4: Registry DApp creates three (3) smart contract licenses. One for the ORG
 Step 5. Registry DApp sends off information to the ARY Membership Service Provider. User is given an authentication code that enables them to claim their registration on the MSP.
 Step 6: User claims their Membership Certificate, and depending on their registration, can begin enrolling their employees, or being transacting on the network. 
 
+**Side Chains & 3rd Party Developers**
+
+
+
+!> The follow section is a preliminary design and may not be implemented fully
 `Claw back rate, C: C = transactions x (1/4) `
 `Transaction lock rate, Tb = C * (1/2)`
 `Token License Decay Rate = C + Tb`
@@ -815,6 +820,16 @@ In order to pay for services for master nodes, tokens used in the creation of th
 <center>*Example*</center>
 
 ![alt text](https://s3.amazonaws.com/blockarray-hosting/static/whitepaper_imgs/network_resources_table.png "Preliminary Staking")
+
+
+The Ethereum Token is retained, even though there is a blockchain network that is not ethereum based. How can we accomplish this? A few things are necessary:
+
+1. Token can not be used to pay for transactions
+2. Cross-chain RPC nodes must validate who is and isn't authorized to make transactions.
+3. Chaincode that limits transactions per day based on staked tokens 
+4. Having a permission-based network
+
+Tokens are used as a license: they grant the holder a certain number of transactions per day (24 hours, GMT) that they can do. 
 
 #### Calculating Node Reputation 
 
